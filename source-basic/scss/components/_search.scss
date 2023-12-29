@@ -1,0 +1,11 @@
+.search{
+    transition: all linear 0.3s;
+    &.sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    @include mobile{
+        font-size: 12px;
+    }
+}
