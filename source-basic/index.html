@@ -1,36 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/x-icon" href="link logo" />
-    <title>Trang chủ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <div class="modal"></div>
-    <div class="loading"></div>
-    <div class="wrapper">
-      <div class="search">
-        search
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="link logo" />
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="stylesheet" href="scss/main.css" />
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- bootstrap icon cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <div class="modal"></div>
+  <div class="loading"></div>
+  <div class="wrapper container">
+    <!-- HEADER: START -->
+    <header class="navbar header">
+      <div class="logo">
+        <img src="img/SELHONO_LOGO.png" alt="SELHONO_LOGO" width="40">
+        <span class="ms-3">SELHONO</span>
       </div>
-      <header class="header">
-       
-      </header>
-      <main class="main">
-        <h2 class="test">Nguyễn Văn Cường</h2>
-        <div style="height: 3000px;"></div>
-      </main>
-      <footer class="footer">
-     
-      </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+      <nav class="navbar-items d-flex">
+        <a href="#" class="navbar-item home active">Home</a>
+        <a href="#" class="navbar-item pages">Pages</a>
+        <a href="#" class="navbar-item service">Service</a>
+        <a href="#" class="navbar-item project">Project</a>
+        <a href="#" class="navbar-item blog">Blog</a>
+        <a href="#" class="navbar-item contact">Contact</a>
+        <div class="icon-search"><i class="bi bi-search"></i></div>
+      </nav>
+    </header>
+    <!-- HEADER: END -->
+
+    <main class="main">
+      <div class="banner">
+        <p class="solgan">Let's make your <br>
+          home beautiful together</p>
+        <p class="small-desc">There are many variations of the passages <br>
+          of lorem Ipsum fromavailable, majority.</p>
+        <button>Get Started <i class="bi bi-arrow-right ms-3"></i></button>
+      </div>
+
+      <div class="info-block">
+        <div class="row info-block-wrap">
+          <div class="col-4 info-block__item">
+            <p class="title">Project Plan</p>
+            <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
+            <a href="#">Read More <i class="bi bi-arrow-right ms-3"></i></a>
+          </div>
+          <div class="col-4 info-block__item">
+            <p class="title">Interior Work</p>
+            <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
+            <a href="#">Read More <i class="bi bi-arrow-right ms-3"></i></a>
+          </div>
+          <div class="col-4 info-block__item">
+            <p class="title">Realization</p>
+            <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
+            <a href="#">Read More <i class="bi bi-arrow-right ms-3"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-contact">
+        <p class="solgan">We create art <br>
+          for modern life</p>
+        <p class="small-desc">There are many variations of the passages <br>
+          of lorem Ipsum fromavailable, majority.</p>
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <i class="bi bi-telephone"></i>
+            <p class="ms-4">0123456789 <br> <span>Call Us Anytime</span></p>
+          </div>
+          <button>Get Free Estimate <i class="bi bi-arrow-right ms-3"></i></button>
+        </div>
+      </div>
+
+      <div class="people-thoughts-block">
+        <div class="row people-thoughts-block-wrap">
+          <p class="text-center title">What the People Thinks <br> About Us</p>
+          <div class="col-4 people-thoughts-block__item">
+            <div class="info">
+              <div class="info-heading">
+                <img src="img/Avatar/user1.jpg" alt="">
+                <p class="name">Natasha <br> <span>Moscow, Russia</span></p>
+              </div>
+              <p class="desc">Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.</p>
+            </div>
+          </div>
+          <div class="col-4 people-thoughts-block__item">
+            <div class="info">
+              <div class="info-heading">
+                <img src="img/Avatar/user2.jpg" alt="">
+                <p class="name">Raymond Galario <br> <span>UK, London</span></p>
+              </div>
+              <p class="desc">Lorem Ipsum is simply dummy
+                text of the typesetting industry.
+                Ipsum has been scrambled it
+                to make a type book.</p>
+            </div>
+          </div>
+          <div class="col-4 people-thoughts-block__item">
+            <div class="info">
+              <div class="info-heading">
+                <img src="img/Avatar/user3.jpg" alt="">
+                <p class="name">Benny Roll <br> <span>USA, New York</span></p>
+              </div>
+              <p class="desc">Lorem Ipsum is simply dummy 
+                text of the typesetting industry. 
+                Ipsum has been scrambled.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div style="height: 3000px;"></div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
