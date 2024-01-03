@@ -12,5 +12,11 @@
 @import "./layout/header";
 @import "./layout/loading";
 @import "./layout/to-top";
+@import "./layout/footer"; 
+
+// pages layout
 @import "./pages/home";
-@import "./layout/footer";
+@import "./pages/aboutUs";
+@import "./pages/services";
+@import "./pages/servicesSingle";
+@import "./pages/pricing";

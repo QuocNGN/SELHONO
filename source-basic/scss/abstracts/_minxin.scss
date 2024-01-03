@@ -1,4 +1,4 @@
-@import '../base/font';
+@import "../base/font";
 
 // breakpoint
 @mixin sm-desk {
@@ -26,11 +26,68 @@
 }
 
 @mixin fontDMSerif400 {
-	font-family: 'DMSerifDisplay';
+	font-family: "DMSerifDisplay";
 	font-weight: 400;
 }
 
 @mixin fontJost400 {
-	font-family: 'fJost-400';
+	font-family: "fJost-400";
 	font-weight: 400;
+}
+
+@mixin FontJostText {
+	color: #4d5053;
+	@include fontJost400;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	letter-spacing: 0.22px;
+}
+
+@mixin FontDMSerifTitle {
+	color: #292f36;
+	@include fontDMSerif400;
+	font-size: 50px;
+	font-style: normal;
+	line-height: 125%;
+	letter-spacing: 1px;
+}
+
+@mixin absoluteDirection($direction) {
+	position: absolute;
+
+	@if $direction == "left" {
+		left: 0;
+		top: 0;
+	}
+	@if $direction == "right" {
+		right: 0;
+		top: 0;
+	}
+	@if $direction == "center" {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@mixin BtnBlack {
+	padding: 25px 40px;
+	margin-top: 41px;
+	border-radius: 18px;
+	background: #292f36;
+	box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+	@include fontJost400;
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 125%;
+	letter-spacing: 0.36px;
+	height: 75px;
+	i {
+		font-size: 21px;
+	}
 }

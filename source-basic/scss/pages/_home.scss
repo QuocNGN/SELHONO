@@ -15,7 +15,7 @@
       p.solgan {
          color: #fff;
          font-size: 65px;
-         font-family: 'DMSerifDisplay';
+         font-family: "DMSerifDisplay";
          font-weight: 400;
          padding: 65px 0px 20px 20px;
          line-height: 81.25px;
@@ -24,7 +24,7 @@
       p.small-desc {
          font-size: 65px;
          font-size: 22px;
-         font-family: 'fInter-500';
+         font-family: "fInter-500";
          line-height: 33px;
          letter-spacing: 1px;
          font-weight: 500;
@@ -66,16 +66,16 @@
          text-align: center;
 
          p.title {
-            font-family: 'DMSerifDisplay';
+            font-family: "DMSerifDisplay";
             font-size: 25px;
             padding-bottom: 0px;
          }
 
          p {
             font-size: 22px;
-            font-family: 'fJost-400';
+            font-family: "fJost-400";
             font-weight: 400;
-            color: #4D5053;
+            color: #4d5053;
             line-height: 33px;
             padding-bottom: 40px;
             letter-spacing: 1px;
@@ -85,9 +85,9 @@
             margin-top: 50px;
             text-decoration: none;
             font-size: 18px;
-            font-family: 'fJost-400';
+            font-family: "fJost-400";
             font-weight: 600;
-            color: #4D5053;
+            color: #4d5053;
          }
       }
    }
@@ -96,7 +96,9 @@
 .banner-contact {
    background-image: url("/img/HOME/bannerHalfL.png"), url("/img/HOME/bannerHalfR.png");
    background-repeat: no-repeat, no-repeat;
-   background-position: left center, right center;
+   background-position:
+      left center,
+      right center;
    background-size: auto 100%;
    height: 700px;
    margin-top: $marginTop;
@@ -104,7 +106,7 @@
    p.solgan {
       color: #fff;
       font-size: 55px;
-      font-family: 'DMSerifDisplay';
+      font-family: "DMSerifDisplay";
       font-weight: 400;
       padding: 140px 0px 20px 20px;
       line-height: 69px;
@@ -112,7 +114,7 @@
 
    p.small-desc {
       font-size: 22px;
-      font-family: 'fJost-400';
+      font-family: "fJost-400";
       line-height: 33px;
       letter-spacing: 1px;
       font-weight: 500;
@@ -138,7 +140,7 @@
 
          p {
             font-size: 24px;
-            font-family: 'fJost-400';
+            font-family: "fJost-400";
             line-height: 33px;
             letter-spacing: 1px;
             color: #fff;
@@ -173,7 +175,7 @@
 .people-thoughts-block {
    margin-top: 194px;
    height: 680px;
-   background-color: #D8A876;
+   background-color: #d8a876;
    padding: 80px 45px;
    border-radius: 80px;
 
@@ -184,7 +186,7 @@
       p.title {
          font-size: 50px;
          line-height: 62.5px;
-         font-family: 'DMSerifDisplay';
+         font-family: "DMSerifDisplay";
          font-weight: 400;
          letter-spacing: 2px;
          color: #fff;
@@ -212,12 +214,12 @@
                   margin-left: 20px;
                   font-weight: bold;
                   font-size: 25px;
-                  font-family: 'DMSerifDisplay';
+                  font-family: "DMSerifDisplay";
                }
 
                span {
                   font-size: 18px;
-                  font-family: 'fJost-400';
+                  font-family: "fJost-400";
                   font-weight: 400;
                }
             }
@@ -225,14 +227,13 @@
             p.desc {
                margin-top: 20px;
                font-size: 22px;
-               font-family: 'fJost-400';
+               font-family: "fJost-400";
                font-style: 24px;
                font-weight: 500;
-               color: #4D5053;
+               color: #4d5053;
                letter-spacing: 1px;
                line-height: 33px;
             }
-
          }
       }
    }
@@ -253,15 +254,15 @@
       @include fontDMSerif400;
       font-size: 60px;
       line-height: 75px;
-      letter-spacing: .32px;
+      letter-spacing: 0.32px;
    }
 
    &-content {
       @include fontJost400;
       font-size: 28px;
       line-height: 150%;
-      letter-spacing: .16px;
-      color: #4D5053;
+      letter-spacing: 0.16px;
+      color: #4d5053;
       max-width: 737px;
    }
 }
@@ -294,7 +295,7 @@
                   font-size: 25px;
                   line-height: 125%;
                   letter-spacing: 0.5px;
-                  color: #292F36;
+                  color: #292f36;
                }
 
                span {
@@ -302,7 +303,7 @@
                   font-size: 22px;
                   line-height: 150%;
                   letter-spacing: 0.22px;
-                  color: #4D5053;
+                  color: #4d5053;
                }
             }
 
@@ -338,7 +339,7 @@
             font-size: 85px;
             line-height: 125%;
             letter-spacing: 1.7px;
-            color: #CDA274;
+            color: #cda274;
          }
 
          span {
@@ -346,7 +347,7 @@
             font-size: 22px;
             line-height: 150%;
             letter-spacing: 0.22px;
-            color: #4D5053;
+            color: #4d5053;
          }
       }
    }
@@ -373,13 +374,15 @@
    .areaRoom-design-item {
       padding: 21px;
       border-radius: 62px;
-      border: 1px solid #E7E7E7;
+      border: 1px solid #e7e7e7;
       box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
       width: 392px;
       cursor: pointer;
 
       &__img {
-         background: url("/img/HOME/kit3.png"), lightgray 50% / cover no-repeat;
+         background:
+            url("/img/HOME/kit3.png"),
+            lightgray 50% / cover no-repeat;
          width: 100%;
          height: 290px;
          border-radius: 40px 40px 0 0;
@@ -393,10 +396,10 @@
             bottom: 5%;
             left: 6%;
             border-radius: 8px 8px 8px 0px;
-            background: rgba(0, 0, 0, 0.50);
+            background: rgba(0, 0, 0, 0.5);
             width: 124px;
             height: 41px;
-            color: #FFF;
+            color: #fff;
             @include fontJost400;
             font-size: 16px;
             font-style: normal;
@@ -410,7 +413,7 @@
          margin-top: 20px;
 
          p {
-            color: #292F36;
+            color: #292f36;
             @include fontDMSerif400;
             font-size: 25px;
             font-style: normal;
@@ -425,7 +428,7 @@
             align-items: center;
 
             span {
-               color: #4D5053;
+               color: #4d5053;
                @include fontJost400;
                font-size: 16px;
                font-style: normal;
@@ -446,11 +449,60 @@
 // Select active JS
 .selected {
    background-color: #f4f0ec;
- }
+}
 
- .banner-footer {
-    margin: 0 !important;
-    padding: 0 !important;
-    margin-top: 120px !important;
-    box-sizing: border-box;
- }
+.banner-footer {
+   margin: 0 !important;
+   padding: 0 !important;
+   margin-top: 120px !important;
+   box-sizing: border-box;
+   background-image: url("/img/HOME/banner-footer.svg");
+   height: 430px;
+   &-content {
+      padding-top: 80px;
+      text-align: center;
+      .title {
+         color: #fff;
+         text-align: center;
+         @include fontDMSerif400;
+         font-size: 50px;
+         font-style: normal;
+         line-height: 125%;
+      }
+      .desc {
+         margin-top: 11px;
+         color: #fff;
+         text-align: center;
+         @include fontJost400;
+         font-size: 22px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: 150%;
+         letter-spacing: 0.22px;
+      }
+      button {
+         margin-top: 22px;
+         border-radius: 18px;
+         background: #cda274;
+         box-shadow: 0px 10px 20px 0px #1f2022;
+         border: none;
+         outline: none;
+         padding: 26px 37px;
+         color: #fff;
+         text-align: center;
+         @include fontJost400;
+         font-size: 18px;
+         font-style: normal;
+         font-weight: 600;
+         line-height: 125% ;
+         letter-spacing: 0.36px;
+         max-height: 75px;
+
+         i.bi-arrow-right-short {
+            stroke-width: 2px;
+            stroke: #fff;
+            font-size: 24px;
+         }
+      }
+   }
+}
