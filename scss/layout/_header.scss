@@ -1,0 +1,41 @@
+@import "../base/font";
+
+.header {
+  margin-top: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 40px;
+      font-family: "fdms-400";
+      font-weight: 400;
+    }
+  }
+
+  .navbar-items {
+    line-height: 25px;
+
+    .navbar-item {
+      padding: 0px 30px;
+      font-size: 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .active {
+      color: #c76904;
+    }
+
+    .icon-search {
+      color: #141414;
+      font-size: 21px;
+      margin-top: 2px;
+    }
+  }
+}

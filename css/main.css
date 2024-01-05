@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "fw-700";
+  src: url("../font/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "fw-600";
+  src: url("../font/Roboto-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "fw-500";
+  src: url("../font/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "fw-400";
+  src: url("../font/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "italic-400";
+  src: url("../font/Roboto-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "fw-300";
+  src: url("../font/Roboto-Light.ttf") format("truetype");
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  font-family: "fw-400";
+  font-size: 14px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  color: #333333;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.prevent-scroll {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  width: 1440px;
+  margin: auto;
+}
+
+@media (max-width: 1490px) {
+  .container {
+    width: 1150px;
+    max-width: 1150px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 960px;
+    max-width: 960px;
+  }
+}
+@media (max-width: 1023px) {
+  .container {
+    width: calc(100% - 120px);
+    max-width: calc(100% - 120px);
+  }
+}
+@media (max-width: 739px) {
+  .container {
+    width: calc(100% - 50px);
+    max-width: calc(100% - 50px);
+  }
+}
+@media (max-width: 1023px) {
+  .hide-on-mobile-tablet {
+    display: none !important;
+  }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+}
+/* Mobile */
+@media (max-width: 739px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+.search {
+  transition: all linear 0.3s;
+}
+.search.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 739px) {
+  .search {
+    font-size: 12px;
+  }
+}
+
+.header {
+  background-color: green;
+}
+
+.test {
+  font-family: "fw-700";
+  color: blue;
+}/*# sourceMappingURL=main.css.map */

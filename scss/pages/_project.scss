@@ -1,0 +1,117 @@
+@import "../base/font";
+@import "../abstracts/variable";
+@import "../abstracts/minxin";
+
+.service-banner {
+   width: 100%;
+   height: 356px;
+   box-sizing: border-box;
+   background-image: url("/img/Pricing/Banner.svg");
+   color: #fff;
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   @include fontDMSerif400;
+   font-size: 70px;
+   font-style: normal;
+   line-height: 125%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.main {
+   .project-wrapper {
+      display: flex;
+      justify-content: center;
+      #filter {
+         .filter_button {
+            border-radius: 20px;
+            border: 1px solid #cda274;
+            height: 75px;
+            width: 880px;
+            display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // column-gap: 96px;
+            margin: 0 auto;
+            overflow: hidden;
+            & > a.btn-filter-tab {
+               max-width: 220px;
+               text-decoration: none;
+               width: 25%;
+               text-align: center;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               cursor: pointer;
+               @include FontJostText;
+               font-size: 18px;
+               height: 100%;
+               font-weight: 600;
+               &.active {
+                  background-color: #cda274;
+                  color: white;
+                  width: 100%;
+                  border-radius: 20px;
+               }
+            }
+         }
+         .filter-data {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .element_room {
+               max-width: 580px;
+               padding: 0;
+               margin: 0;
+               margin-top: 38px;
+               .img-room {
+                  max-width: 580px;
+                  height: 700px;
+               }
+               .infor {
+                  max-width: 100%;
+                  margin-top: 42px;
+                  display: flex;
+                  justify-content: space-between;
+                  &-content {
+                     .name_item {
+                        @include FontDMSerifTitle;
+                        font-size: 25px;
+                        span {
+                           @include FontJostText;
+                           font-size: 22px;
+                        }
+                     }
+                  }
+               }
+            }
+            .listPage {
+               width: 100%;
+               margin-top: 112px;
+               margin-bottom: 235px;
+               display: flex;
+               justify-content: center;
+               column-gap: 20px;
+               cursor: pointer;
+               li {
+                  list-style: none;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 52px;
+                  height: 52px;
+                  border-radius: 100px;
+                  border: 1px solid #cda274;
+                  text-align: center;
+                  @include FontJostText;
+                  font-size: 16px;
+                  font-weight: 600;
+                  &.active {
+                     background-color: #f4f0ec;
+                  }
+               }
+            }
+         }
+      }
+      // end of servicesSingle
+   }
+}
