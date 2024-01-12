@@ -86,6 +86,7 @@
                      @include FontJostText;
                      line-height: 300%;
                      border-bottom: 1px solid #cda274;
+                     cursor: pointer;
                      &:last-child {
                         border: none;
                      }

@@ -19,51 +19,68 @@
 }
 .main {
    .services-wrapper {
-      .info-block__item:hover p,
-      .info-block__item:hover a {
-         color: #c76904;
-         cursor: pointer;
-      }
-
-      .section-slogan {
-         margin-top: 293px;
-         text-align: center;
-         .title {
-            @include FontDMSerifTitle;
-         }
-         .content {
-            @include FontJostText;
-         }
-      }
-
-      .section-content {
-         margin-top: 156px;
-         &-item {
-            position: relative;
-            &__inner {
-               transform: translateY(50%);
-               .title {
-                  font-size: 35px;
-               }
+      .info-block-wrap {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         row-gap: 171px;
+         // a.info-block-link {
+         //    &:nth-child(n + 4) {
+         //       margin-top: 88px;
+         //    }
+         .info-block__item {
+            a {
+               transition: 0.5s ease 0.25s;
             }
-            .numTitle {
-               position: absolute;
-               top: 0;
-               right: 0;
-               @include fontDMSerif400;
+            P {
+               transition: 0.65s ease;
+            }
+            &:hover p,
+            &:hover a {
                color: #c76904;
-               font-size: 90px;
-               font-style: normal;
-               line-height: 150%;
-               letter-spacing: 0.9px;
             }
          }
-         &-item:nth-child(odd) .numTitle {
-            @include absoluteDirection("right");
+      }
+   }
+
+   .section-slogan {
+      margin-top: 293px;
+      text-align: center;
+      .title {
+         @include FontDMSerifTitle;
+      }
+      .content {
+         @include FontJostText;
+      }
+   }
+
+   .section-content {
+      margin-top: 156px;
+      &-item {
+         position: relative;
+         &__inner {
+            transform: translateY(50%);
+            .title {
+               font-size: 35px;
+            }
          }
-         &-item:nth-child(even) .numTitle {
-            @include absoluteDirection("left");
+         .numTitle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            @include fontDMSerif400;
+            color: #c76904;
+            font-size: 90px;
+            font-style: normal;
+            line-height: 150%;
+            letter-spacing: 0.9px;
          }
+      }
+      &-item:nth-child(odd) .numTitle {
+         @include absoluteDirection("right");
+      }
+      &-item:nth-child(even) .numTitle {
+         @include absoluteDirection("left");
       }
    }
 }

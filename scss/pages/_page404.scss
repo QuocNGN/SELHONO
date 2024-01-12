@@ -1,0 +1,50 @@
+@import "../base/font";
+@import "../abstracts/variable";
+@import "../abstracts/minxin";
+
+.team-banner {
+   @include commonBannerStyles;
+   background-image: url("/img/Team/Banner.svg");
+}
+.main {
+   .error-wrapper {
+      margin-top: 202px;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      position: relative;
+      img {
+         max-width: 750px;
+         height: 620px;
+         border-radius: 0px 0px 400px 0px;
+         // margin-bottom: 410px;
+         // border: 1px solid red;
+      }
+      &-message {
+         position: absolute;
+         top: 70%; 
+         left: 50%;
+         text-align: start;
+         padding-bottom: 105px;
+         .heading {
+            @include FontDMSerifTitle;
+            font-size: 250px;
+            color: #CDA274;
+         }
+         .desc {
+            margin-top: 15px;
+            @include FontDMSerifTitle;
+            font-size: 35px;
+         }
+         button {
+            @include BtnBlack;
+            i {
+               color: #CDA274;
+               font-weight: bolder;
+               font-size: 26px;
+            }
+         }
+      }
+      // end of page 404
+   }
+}

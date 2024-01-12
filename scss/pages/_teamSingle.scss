@@ -1,0 +1,232 @@
+@import "../base/font";
+@import "../abstracts/variable";
+@import "../abstracts/minxin";
+@import "../base/animate";
+
+.team-banner {
+   @include commonBannerStyles;
+   background-image: url("/img/Team/Banner.svg");
+}
+.main {
+   .teamSingle-wrapper {
+      margin-top: 115px;
+      margin-bottom: 210px;
+      &-info {
+         display: flex;
+         justify-content: space-between;
+         column-gap: 70px;
+         .bio {
+            text-align: center;
+            .name {
+               @include FontDMSerifTitle;
+            }
+            .jod {
+               @include FontJostText;
+            }
+            .desc {
+               margin-top: 55px;
+               @include FontJostText;
+               text-align: start;
+            }
+            .contact {
+               list-style-type: none;
+               padding: 0;
+               margin: 0;
+               text-align: start;
+               margin-top: 55px;
+               display: flex;
+               flex-direction: column;
+               row-gap: 30px;
+               padding-left: 10px;
+               li {
+                  @include FontJostText;
+                  font-size: 20px;
+                  i {
+                     color: #cda274;
+                     font-weight: bolder;
+                     margin-right: 15px;
+                  }
+                  a {
+                     text-decoration: none;
+                     color: #4d5053;
+                  }
+               }
+            }
+            .social {
+               padding-left: 10px;
+               text-align: start;
+               display: flex;
+               column-gap: 35px;
+               margin-top: 45px;
+               i {
+                  @include FontJostText;
+                  font-size: 20px;
+                  cursor: pointer;
+               }
+            }
+         }
+         .avatar {
+            img {
+               border-radius: 40px;
+               height: 740px;
+               object-fit: cover;
+            }
+         }
+      }
+      &-shortBio {
+         .heading {
+            @include FontDMSerifTitle;
+         }
+         p {
+            margin-top: 20px;
+            @include FontJostText;
+         }
+      }
+      &-skills {
+         margin-top: 45px;
+         display: flex;
+         justify-content: space-between;
+         column-gap: 95px;
+         .simpliAndFunc {
+            max-width: 600px;
+            span.heading {
+               @include FontDMSerifTitle;
+               font-size: 25px;
+            }
+            .desc {
+               margin-top: 15px;
+               @include FontJostText;
+            }
+            .skill-container {
+               display: flex;
+               flex-direction: column;
+               row-gap: 30px;
+               .skill {
+                  &-name {
+                     @include FontJostText;
+                  }
+                  &:first-child {
+                     margin-top: 30px;
+                  }
+                  &-bar {
+                     margin-top: 12px;
+                     width: 100%;
+                     height: 5px;
+                     border-radius: 25px;
+                     background-color: #f4f0ec;
+                     .skill-per {
+                        height: 5px;
+                        background-color: #cda274;
+                        position: relative;
+                        border-radius: 25px;
+                        animation: fillBars 2.5s 1;
+                        @keyframes fillBars {
+                           from {
+                              width: 0;
+                           }
+                           to {
+                              width: 100%;
+                           }
+                        }
+
+                        &::before {
+                           content: attr(per);
+                           position: absolute;
+                           top: -40px;
+                           right: -15px;
+                           @include FontJostText;
+                           font-size: 16px;
+                           font-weight: bold;
+                        }
+                        &::after {
+                           content: "";
+                           position: absolute;
+                           width: 20px;
+                           height: 20px;
+                           background-color: #fff;
+                           border: 5px solid #cda274;
+                           border-radius: 100%;
+                           top: -9px;
+                           right: 0;
+                           transform: translateX(50%) rotate(45deg);
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         .QnA {
+            .heading {
+               @include FontDMSerifTitle;
+               font-size: 25px;
+            }
+            .desc {
+               margin-top: 15px;
+               @include FontJostText;
+            }
+            &-accordion {
+               &-item {
+                  margin-top: 30px;
+                  padding: 12px 22px;
+                  background-color: #fff;
+                  border: 1px solid #000;
+                  border-radius: 18px;
+
+                  &:first-child {
+                     margin-top: 19px;
+                  }
+                  .accordion-heading {
+                     @include FontJostText;
+                     font-size: 18px;
+                     font-weight: 600;
+                     letter-spacing: 0.36px;
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     cursor: pointer;
+                     padding-top: 12px;
+                     .symbol {
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 50px;
+                        background-color: #f4f0ec;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        i {
+                           border-radius: 10px;
+                           // background-color: #fff;
+                           font-size: 32px;
+                           font-weight: bolder;
+                           @include fontDMSerif400;
+                        }
+                     }
+                  }
+                  .accordion-content {
+                     @include FontJostText;
+                     max-height: 0;
+                     overflow: hidden;
+                     transition: all 1s ease-in-out;
+                     p {
+                        padding-top: 15px;
+                     }
+                  }
+
+                  &.active {
+                     background-color: #F4F0EC;
+                     border: none;
+                     .symbol {
+                        background-color: #fff;
+                     }
+                     .accordion-content {
+                        max-height: 100vh;
+                        transition: all 1s ease-in-out;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      // end of teamSingle
+   }
+}

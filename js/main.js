@@ -50,6 +50,34 @@ Array.from(btn_filter_tab).forEach(function (element) {
     })
 })
 
+// teamSingle - accordion
+let accordion = document.querySelectorAll(".QnA-accordion-item");
+
+function toggleAccordion(item) {
+    accordion.forEach(eachItem => {
+        eachItem.classList.remove("active");
+        let eachSymbol = eachItem.querySelector(".symbol");
+        if (eachSymbol) {
+            eachSymbol.innerHTML = '<i class="bi bi-plus"></i>';
+        }
+    });
+
+    item.classList.add("active");
+    console.log("click it");
+
+    let symbol = item.querySelector(".symbol");
+    if (symbol) {
+        symbol.innerHTML = '<i class="bi bi-dash"></i>';
+    }
+}
+
+accordion.forEach(item => {
+    item.addEventListener("click", () => {
+        toggleAccordion(item);
+    });
+});
+
+
 // ProjectDetail - Zoom Image
 let zoom = document.querySelector('.zoom');
 let imgZoom = document.getElementById('imgZoom');
@@ -76,6 +104,7 @@ zoom.addEventListener('mouseout', () => {
     imgZoom.style.opacity = 0;
     iconZoom.style.opacity = 1;
 })
+
 
 // ServicesSingle Page - Model Video
 let btnPreview = document.querySelector('.icon-play');
