@@ -25,7 +25,9 @@ function changeColor(element) {
 }
 
 
-// Project Page - tab Filter
+/* -------------------------------------------------------------
+        ================ Project Page - tab Filter
+-----------------------------------------------------------------*/
 const name_item = document.querySelectorAll('name_item');
 const element_room = document.querySelectorAll('.element_room');
 const btn_filter_tab = document.querySelectorAll('.filter_button .btn-filter-tab');
@@ -50,7 +52,9 @@ Array.from(btn_filter_tab).forEach(function (element) {
     })
 })
 
-// teamSingle - accordion
+/* -------------------------------------------------------------
+        ================ TeamSingle - accordion
+-----------------------------------------------------------------*/
 let accordion = document.querySelectorAll(".QnA-accordion-item");
 
 function toggleAccordion(item) {
@@ -78,7 +82,29 @@ accordion.forEach(item => {
 });
 
 
-// ProjectDetail - Zoom Image
+/* -------------------------------------------------------------
+        ================ FAQ - accordion Toggle 
+-----------------------------------------------------------------*/
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach((faq) => {
+    faq.addEventListener("click", () => {
+        // Loại bỏ active từ tất cả các phần tử
+        faqs.forEach((otherFaq) => {
+            if (otherFaq !== faq) {
+                otherFaq.classList.remove("active");
+            }
+        });
+
+        // Toggle active cho phần tử được nhấp vào
+        faq.classList.toggle("active");
+    });
+});
+
+
+/* -------------------------------------------------------------
+        ================ ProjectDetail - Zoom Image
+-----------------------------------------------------------------*/
 let zoom = document.querySelector('.zoom');
 let imgZoom = document.getElementById('imgZoom');
 let iconZoom = document.querySelector('.icon-zoom');
@@ -106,7 +132,51 @@ zoom.addEventListener('mouseout', () => {
 })
 
 
-// ServicesSingle Page - Model Video
+/* -------------------------------------------------------------
+        ================ Slider: About Us
+-----------------------------------------------------------------*/
+let slider = document.querySelector('.slider .list');
+let itemsList = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dotsSlide = document.querySelectorAll('.slider .dots li');
+
+let lengthItems = itemsList.length - 1;
+let activeDemo = 0;
+next.onclick = function(){
+    active = active + 1 <= lengthItems ? activeDemo + 1 : 0;
+    reloadSlider();
+}
+prev.onclick = function(){
+    activeDemo = activeDemo - 1 >= 0 ? activeDemo - 1 : lengthItems;
+    reloadSlider();
+}
+let refreshInterval = setInterval(()=> {next.click()}, 3000);
+function reloadSlider(){
+    slider.style.left = -items[activeDemo].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slider .dots li.active');
+    activeDemo.classList.remove('active');
+    dotsSlide[activeDemo].classList.add('active');
+
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 3000);
+}
+
+dotsSlide.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+        activeDemo = key;
+        reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
+};
+
+
+/* -------------------------------------------------------------
+        ================ ServicesSingle Page - Model Video
+-----------------------------------------------------------------*/
 let btnPreview = document.querySelector('.icon-play');
 let clip = document.querySelector('.clip');
 let btnClose = document.querySelector('.closeBtn');
@@ -124,7 +194,23 @@ btnClose.onclick = function () {
 }
 
 
+let listSlide = document.querySelector('.accordion .slide-wrapper');
+let items = document.querySelectorAll('.accordion .slide-wrapper .slide');
+let dots = document.querySelectorAll('.accordion .dots ');
+let prevBtn = document.getElementById('prev');
+let nextBtn = document.getElementById('next');
+let active = 0;
 
+nextBtn.onclick = function() {
+    active += 1;
+    reloadSlider();
+}
+
+function reloadSlider() {
+    let checkLeft = items[active].offsetLeft;
+    listSlide.style.left = -checkLeft + 'px';
+    
+}
 
 // let zoom = document.querySelector('.zoom');
 // let imgZoom = document.getElementById('imgZoom');
@@ -148,3 +234,4 @@ btnClose.onclick = function () {
 // zoom.addEventListener('mouseout', () => {
 //     imgZoom.style.opacity = 0;
 // });
+

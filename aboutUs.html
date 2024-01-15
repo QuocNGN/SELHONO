@@ -13,6 +13,10 @@
 
   <!-- bootstrap css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- swiper slider css -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
   <!-- bootstrap icon cdn -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
@@ -28,8 +32,10 @@
     <header class="navbar header">
       <div class="container">
         <div class="logo">
-          <img src="img/SELHONO_LOGO.png" alt="SELHONO_LOGO" width="40">
-          <span class="ms-3">SELHONO</span>
+          <a href="index.html">
+            <img src="img/SELHONO_LOGO.png" alt="SELHONO_LOGO" width="40">
+            <span class="ms-3">SELHONO</span>
+          </a>
         </div>
         <nav class="navbar-items d-flex">
           <a href="index.html" class="navbar-item home active">Home</a>
@@ -42,75 +48,72 @@
         </nav>
       </div>
     </header>
-    <!-- HEADER: END -->
-
-    <main class="main container">
-      <div class="accordion">
-        <div class="slide">
-          <!-- <h2><a href="#">Slide One</a></h2> -->
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt temporibus, harum ducimus
-              deserunt aspernatur. Consequatur perspiciatis esse, vero quisquam quod expedita ratione error voluptate.
-              Ipsum animi cupiditate et architecto?</p>
-          </div>
-        </div>
-        <div class="slide">
-          <!-- <h2><a href="#">Slide Two</a></h2> -->
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt temporibus, harum ducimus
-              deserunt aspernatur. Consequatur perspiciatis esse, vero quisquam quod expedita ratione error voluptate.
-              Ipsum animi cupiditate et architecto?</p>
-          </div>
-        </div>
-        <div class="slide">
-          <!-- <h2><a href="#">Slide Three</a></h2> -->
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt temporibus, harum ducimus
-              deserunt aspernatur. Consequatur perspiciatis esse, vero quisquam quod expedita ratione error voluptate.
-              Ipsum animi cupiditate et architecto?</p>
-          </div>
-        </div>
-        <div class="slide">
-          <!-- <h2><a href="#">Slide Four</a></h2> -->
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt temporibus, harum ducimus
-              deserunt aspernatur. Consequatur perspiciatis esse, vero quisquam quod expedita ratione error voluptate.
-              Ipsum animi cupiditate et architecto?</p>
-          </div>
-        </div>
-        <div class="slide">
-          <!-- <h2><a href="#">Slide Five</a></h2> -->
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt temporibus, harum ducimus
-              deserunt aspernatur. Consequatur perspiciatis esse, vero quisquam quod expedita ratione error voluptate.
-              Ipsum animi cupiditate et architecto?</p>
-          </div>
-        </div>
-        <div class="slide">
-          <!-- <h2><a href="#">Slide Six</a></h2> -->
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt temporibus, harum ducimus
-              deserunt aspernatur. Consequatur perspiciatis esse, vero quisquam quod expedita ratione error voluptate.
-              Ipsum animi cupiditate et architecto?</p>
-          </div>
-        </div>
-        <div class="slide">
-          <!-- <h2><a href="#">Slide Seven</a></h2> -->
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt temporibus, harum ducimus
-              deserunt aspernatur. Consequatur perspiciatis esse, vero quisquam quod expedita ratione error voluptate.
-              Ipsum animi cupiditate et architecto?</p>
-          </div>
-        </div>
-        <div class="slide">
-          <!-- <h2><a href="#">Slide Eight</a></h2> -->
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sunt temporibus, harum ducimus
-              deserunt aspernatur. Consequatur perspiciatis esse, vero quisquam quod expedita ratione error voluptate.
-              Ipsum animi cupiditate et architecto?</p>
-          </div>
+  </div>
+  <!-- HEADER: END -->
+  <div class="accordion container-fluid">
+    <div class="slide-wrapper">
+      <div class="slide">
+        <img src="img/ABOUT_US/slider1.avif" alt="">
+        <div class="content">
+          <p>About Us</p>
         </div>
       </div>
+      <div class="slide">
+        <img src="img/ABOUT_US/slider2.avif" alt="">
+        <div class="content">
+          <p>About Us</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/ABOUT_US/slider3.avif" alt="">
+        <div class="content">
+          <p>About Us</p>
+        </div>
+      </div>
+      <div class="slide activeOpen">
+        <img src="img/ABOUT_US/slider4.avif" alt="">
+        <div class="content">
+          <p>About Us</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/ABOUT_US/slider5.avif" alt="">
+        <div class="content">
+          <p>About Us</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/ABOUT_US/slider6.avif" alt="">
+        <div class="content">
+          <p>About Us</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/ABOUT_US/slider7.avif" alt="">
+        <div class="content">
+          <p>About Us</p>
+        </div>
+      </div>
+    </div>
+    <!-- button prev and next -->
+    <div class="buttons">
+      <button id="prev"><i class="bi bi-chevron-left"></i></button>
+      <button id="next"><i class="bi bi-chevron-right"></i></button>
+    </div>
+    <!-- dot (if 5 item  => 5 dot) -->
+    <ul class="dots">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <main class="main container" style="border: 1px solid red;">
+    <div class="aboutUs-wrapper">
 
       <div class="think-feel">
         <div class="think-feel-wrap">
@@ -122,25 +125,27 @@
 
       <div class="section-content">
         <div class="section-content-item">
-          <div class="section-content-item__inner">
+          <div class="section-content-item__text">
             <div class="title">
               What We Do
             </div>
-            <div class="content">It is a long established fact that a reader will be <br> distracted by the of readable
+            <div class="content">It is a long established fact that a reader will be <br> distracted by the of
+              readable
               content of a page <br>
               when lookings at its layouts the points of using <br>
               that it has a more-or-less normal.</div>
             <button>Our Concept <i class="bi bi-arrow-right-short"></i></button>
           </div>
-          <img src="img/ABOUT_US/RoomLeft.svg" alt="">
+          <img src="img/ABOUT_US/ItemR.png" alt="">
         </div>
         <div class="section-content-item" style="margin-top: 180px;">
-          <img src="img/ABOUT_US/RoomRight.svg" alt="">
-          <div class="section-content-item__inner">
+          <img src="img/ABOUT_US/ItemL.png" alt="">
+          <div class="section-content-item__text">
             <div class="title">
               What We Do
             </div>
-            <div class="content">It is a long established fact that a reader will be <br> distracted by the of readable
+            <div class="content">It is a long established fact that a reader will be <br> distracted by the of
+              readable
               content of a page <br>
               when lookings at its layouts the points of using <br>
               that it has a more-or-less normal.</div>
@@ -197,61 +202,64 @@
         <input type="text" placeholder="Message" class="inpt-bottom">
         <button>Send Now <i class="bi bi-arrow-right-short"></i></button>
       </div>
-      <div style="height: fit-content;"></div>
-    </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__inner-socails">
-            <div class="logo">
-              <div class="img">
-                <img src="img/SELHONO_LOGO.png" alt="">
-              </div>
-              <span>SELHONO</span>
+    </div>
+    <div style="height: fit-content;"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__inner-socails">
+          <div class="logo">
+            <div class="img">
+              <img src="img/SELHONO_LOGO.png" alt="">
             </div>
-            <p class="slogan">
-              It is a long established fact that a reader <br> will be distracted lookings.
-            </p>
-            <div class="footer__inner-socails-icons">
-              <i class="bi bi-facebook"></i>
-              <i class="bi bi-twitter"></i>
-              <i class="bi bi-linkedin"></i>
-              <i class="bi bi-instagram"></i>
-            </div>
+            <span>SELHONO</span>
           </div>
-          <div class="footer__inner-pages">
-            <p class="title">Pages</p>
-            <p>About Us</p>
-            <p>Our Projects</p>
-            <p>Our Team</p>
-            <p>Contact Us</p>
-            <p>Services</p>
-          </div>
-          <div class="footer__inner-services">
-            <p class="title">Services</p>
-            <p>Kitchen</p>
-            <p>Living Area</p>
-            <p>Bathroom</p>
-            <p>Dinning Hall</p>
-            <p>Bedroom</p>
-          </div>
-          <div class="footer__inner-contact">
-            <p class="title">Contact</p>
-            <p>55 East Birchwood Ave. <br> Brooklyn, New York 11201</p>
-            <p>contact@selhono.com</p>
-            <p>(123) 456 - 7890</p>
+          <p class="slogan">
+            It is a long established fact that a reader <br> will be distracted lookings.
+          </p>
+          <div class="footer__inner-socails-icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-instagram"></i>
           </div>
         </div>
-        <p class="copyright">Copyright © SELHONO </p>
+        <div class="footer__inner-pages">
+          <p class="title">Pages</p>
+          <p>About Us</p>
+          <p>Our Projects</p>
+          <p>Our Team</p>
+          <p>Contact Us</p>
+          <p>Services</p>
+        </div>
+        <div class="footer__inner-services">
+          <p class="title">Services</p>
+          <p>Kitchen</p>
+          <p>Living Area</p>
+          <p>Bathroom</p>
+          <p>Dinning Hall</p>
+          <p>Bedroom</p>
+        </div>
+        <div class="footer__inner-contact">
+          <p class="title">Contact</p>
+          <p>55 East Birchwood Ave. <br> Brooklyn, New York 11201</p>
+          <p>contact@selhono.com</p>
+          <p>(123) 456 - 7890</p>
+        </div>
       </div>
-    </footer>
+      <p class="copyright">Copyright © SELHONO </p>
+    </div>
+  </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/main.js" async></script>
 </body>
 
 </html>

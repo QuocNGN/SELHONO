@@ -23,7 +23,8 @@ body{
 }
 .container{
   max-width: 1400px;
-  width: 1440px;
+  // width: 1440px;
+  width: 1210px !important;
   margin: auto;
 }
 @media (max-width: 1490px) {

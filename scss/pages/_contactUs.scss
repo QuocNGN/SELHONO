@@ -1,0 +1,124 @@
+@import "../base/font";
+@import "../abstracts/variable";
+@import "../abstracts/minxin";
+
+.contactUs-banner {
+   @include commonBannerStyles;
+   background-image: url("/img/ContactUs/Banner.png");
+}
+.main {
+   .contactUs-wrapper {
+      text-align: center;
+      .heading {
+         margin-top: 76px;
+         @include FontDMSerifTitle;
+      }
+      &-via {
+         margin-top: 96px;
+         display: flex;
+         justify-content: space-between;
+         column-gap: 155px;
+         &__socail {
+            min-width: 260px;
+            .contact {
+               list-style-type: none;
+               padding: 0;
+               margin: 0;
+               text-align: start;
+               display: flex;
+               flex-direction: column;
+               row-gap: 30px;
+               padding-left: 10px;
+               li {
+                  @include FontJostText;
+                  font-size: 20px;
+                  i {
+                     color: #cda274;
+                     font-weight: bolder;
+                     margin-right: 15px;
+                  }
+                  a {
+                     text-decoration: none;
+                     color: #4d5053;
+                  }
+               }
+            }
+            .social {
+               padding-left: 10px;
+               text-align: start;
+               display: flex;
+               column-gap: 35px;
+               margin-top: 45px;
+               i {
+                  @include FontJostText;
+                  font-size: 20px;
+                  cursor: pointer;
+               }
+            }
+         }
+         &__form {
+            form {
+               max-width: 900px;
+               .input-wrapper {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-between;
+                  // input {
+                  //    border: none;
+                  //    outline: none;
+                  //    border-bottom: 1px solid #000;
+                  //    width: 378px;
+                  //    padding: 0;
+                  //    margin: 0;
+                  //    margin-bottom: 50px;
+                  //    @include FontJostText;
+                  //    padding-bottom: 5px;
+               }
+            }
+            input,
+            .text-area {
+               border: none;
+               outline: none;
+               border-bottom: 1px solid #000;
+               width: 378px;
+               padding: 0;
+               margin: 0;
+               margin-bottom: 50px;
+               @include FontJostText;
+               padding-bottom: 5px;
+            }
+            .text-area {
+               margin: 0;
+               width: 100%;
+               padding-bottom: 150px;
+               overflow-wrap: break-word;
+               overflow: hidden;
+               resize: none;
+               margin-bottom: 58px;
+            }
+            button {
+               @include BtnBlack;
+               float: right;
+            }
+         }
+      }
+   }
+   .gg-map {
+      margin-top: 120px;
+      border-radius: 100px;
+      overflow: hidden;
+      min-height: 540px;
+      position: relative;
+      img {
+         width: 100%;
+         height: 100%;
+      }
+      i.bi-geo-alt-fill {
+         position: absolute;
+         top: 47%;
+         left: 26%;
+         color:  #CDA274;
+         font-size: 32px;
+      }
+   }
+}

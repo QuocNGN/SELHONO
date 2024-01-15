@@ -32,9 +32,10 @@
             letter-spacing: 0.25px;
          }
          .content-wrap {
-            margin-top: 48px;
+            margin-top: 85px;
             display: flex;
             justify-content: space-between;
+            column-gap: 60px;
             p {
                @include FontJostText;
                width: 587px;
@@ -169,12 +170,13 @@
                   @include FontDMSerifTitle;
                }
                .content {
-                  margin-top: 11px;
+                  // margin-top: 11px;
                   @include FontJostText;
                }
                button {
                   margin-top: 32px;
                   height: 75px;
+                  @include BtnBlack;
                }
             }
          }

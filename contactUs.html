@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/x-icon" href="img/SELHONO_LOGO.png" />
-  <title>SELHONO - Project Details</title>
+  <title>SELHONO - Contact Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
@@ -28,8 +28,10 @@
     <header class="navbar header">
       <div class="container">
         <div class="logo">
-          <img src="img/SELHONO_LOGO.png" alt="SELHONO_LOGO" width="40">
-          <span class="ms-3">SELHONO</span>
+          <a href="index.html">
+            <img src="img/SELHONO_LOGO.png" alt="SELHONO_LOGO" width="40">
+            <span class="ms-3">SELHONO</span>
+          </a>
         </div>
         <nav class="navbar-items d-flex">
           <a href="index.html" class="navbar-item home active">Home</a>
@@ -37,54 +39,60 @@
           <a href="services.html" class="navbar-item service">Service</a>
           <a href="project.html" class="navbar-item project">Project</a>
           <a href="blog.html" class="navbar-item blog">Blog</a>
-          <a href="#" class="navbar-item contact">Contact</a>
+          <a href="contactUs.html" class="navbar-item contact">Contact</a>
           <div class="icon-search"><i class="bi bi-search"></i></div>
         </nav>
       </div>
     </header>
     <!-- HEADER: END -->
-    <div class="projectDetails-banner" style="margin-top: 66px;">
-      <p>Project Details</p>
+    <div class="contactUs-banner" style="margin-top: 66px;">
     </div>
-    <main class="main container" style="margin-top: 37px;">
-      <div class="projectDetails-wrapper">
-
-        <div class="projectDetails-info">
-          <div class="projectDetails-info_inner">
-            <div class="projectDetails-info_inner-bio">
-              <ul>
-                <li><span>Client</span>  <span>Your client name</span></li>
-                <li><span>Category</span>  <span>VIP</span></li>
-                <li><span>Tags</span>  <span>VIP, Home</span></li>
-                <li><span>Date</span>  <span>Date 23,02, 2022</span></li>
-                <li><span>Link</span>  <span>Link example.com</span></li>
-              </ul>
-            </div>
-            <div class="projectDetails-info_inner-content">
-              <p class="title">Minimal Look Bedrooms</p>
-              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim
-                maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim.
-                Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus
-                bibendum commodo. <br> <br>
-
-                In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc,
-                mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante
-                vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin
-                tincidunt ligula id purus porttitor.</p>
+    <main class="main container">
+      <div class="contactUs-wrapper">
+        <p class="heading">
+          We love meeting new people and <br> helping them.
+        </p>
+        <div class="contactUs-wrapper-via">
+          <div class="contactUs-wrapper-via__socail">
+            <ul class="contact">
+              <li><i class="bi bi-envelope"></i><a href="mailto:info@selhono.com">info@selhono.com</a></li>
+              <li><i class="bi bi-telephone"></i><a href="tel:+1374001234">+1 (378) 400-1234</a></li>
+              <li><i class="bi bi-globe-americas"></i><a href="www.selhono.com">www.selhono.com</a></li>
+            </ul>
+            <div class="social">
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
             </div>
           </div>
-        </div>
- 
-        
-        <div class="zoom">
-          <img src="img/ProjectDetails/BedRoomZoomImg.jpg">
-          <img src="img/ProjectDetails/BedRoomZoomImg.jpg" id="imgZoom">
-          <div class="icon-zoom"> 
-            <i class="bi bi-search"></i>
+          <div class="contactUs-wrapper-via__form">
+            <form action="#" class="form-reply">
+              <div class="input-wrapper">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Website">
+                <input type="text" placeholder="Phone">
+              </div>
+              <textarea class="text-area" type="text" placeholder="Hello Iam Intrested in.."></textarea>
+              <button type="submit">Send Now <i class="bi bi-arrow-right"></i></button>
+            </form>
           </div>
         </div>
-
+        <div class="gg-map">
+          <img src="img/ContactUs/map.png" alt="" class="local-map">
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
       </div>
+
       <div style="height: fit-content;"></div>
     </main>
 

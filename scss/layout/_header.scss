@@ -1,19 +1,20 @@
 @import "../base/font";
+@import "../base/font";
+@import "../abstracts/variable";
+@import "../abstracts/minxin";
 
 .header {
   margin-top: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   .logo {
-    display: flex;
-    align-items: center;
-
-    span {
-      font-size: 40px;
-      font-family: "fdms-400";
-      font-weight: 400;
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        @include FontDMSerifTitle;
+        font-size: 40px;
+      }
     }
   }
 

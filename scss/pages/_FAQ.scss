@@ -1,0 +1,80 @@
+@import "../base/font";
+@import "../abstracts/variable";
+@import "../abstracts/minxin";
+
+.FAQ-banner {
+   @include commonBannerStyles;
+   background-image: url("/img/FAQ/Banner.png");
+}
+.main {
+   .FAQ-wrapper {
+      text-align: center;
+      margin-top: 136px;
+      margin-bottom: 225px;
+      &-item {
+         .heading {
+            @include FontDMSerifTitle;
+         }
+         &-content {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 60px;
+            section {
+               .faq {
+                  text-align: start;
+                  max-width: 585px;
+                  border-bottom: 1px solid #292f36;
+                  padding-bottom: 32px;
+                  margin-top: 20px;
+                  cursor: pointer;
+                  overflow: hidden;
+                  .question {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     @include FontDMSerifTitle;
+                     letter-spacing: 0;
+                     font-size: 25px;
+                     p {
+                        margin: 0;
+                     }
+                     i {
+                        transition: transform .65s ease;
+                     }
+                  }
+                  .awnser {
+                     margin-top: 15px;
+                     @include FontJostText;
+                     max-height: 0;
+                     overflow: hidden;
+                     transition: max-height .75s ease;
+                  }
+                  &.active {
+                     .awnser {
+                        max-height: 100vh;
+                        animation: fade .75s ease-in-out;
+                     }
+                     i.bi-chevron-down {
+                        transform: rotate(180deg);
+                     }
+                  }
+               }
+            }
+            img {
+               border-radius: 30px;
+               height: 720px;
+            }
+         }
+      }
+   }
+}
+@keyframes fade {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}

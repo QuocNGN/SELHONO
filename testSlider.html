@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/x-icon" href="img/SELHONO_LOGO.png" />
-  <title>SELHONO - Project Details</title>
+  <title>SELHONO - Team</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
@@ -43,50 +43,83 @@
       </div>
     </header>
     <!-- HEADER: END -->
-    <div class="projectDetails-banner" style="margin-top: 66px;">
-      <p>Project Details</p>
-    </div>
-    <main class="main container" style="margin-top: 37px;">
-      <div class="projectDetails-wrapper">
-
-        <div class="projectDetails-info">
-          <div class="projectDetails-info_inner">
-            <div class="projectDetails-info_inner-bio">
-              <ul>
-                <li><span>Client</span>  <span>Your client name</span></li>
-                <li><span>Category</span>  <span>VIP</span></li>
-                <li><span>Tags</span>  <span>VIP, Home</span></li>
-                <li><span>Date</span>  <span>Date 23,02, 2022</span></li>
-                <li><span>Link</span>  <span>Link example.com</span></li>
-              </ul>
+    <main class="main container">
+      <div class="testSlider-wrapper">
+        <div class="slider">
+          <div class="list">
+            <div class="item">
+              <img src="img/ABOUT_US/slider1.avif" alt="">
             </div>
-            <div class="projectDetails-info_inner-content">
-              <p class="title">Minimal Look Bedrooms</p>
-              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim
-                maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim.
-                Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus
-                bibendum commodo. <br> <br>
-
-                In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc,
-                mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante
-                vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin
-                tincidunt ligula id purus porttitor.</p>
+            <div class="item">
+              <img src="img/ABOUT_US/slider2.avif" alt="">
+            </div>
+            <div class="item">
+              <img src="img/ABOUT_US/slider3.avif" alt="">
+            </div>
+            <div class="item">
+              <img src="img/ABOUT_US/slider4.avif" alt="">
+            </div>
+            <div class="item">
+              <img src="img/ABOUT_US/slider5.avif" alt="">
             </div>
           </div>
-        </div>
- 
-        
-        <div class="zoom">
-          <img src="img/ProjectDetails/BedRoomZoomImg.jpg">
-          <img src="img/ProjectDetails/BedRoomZoomImg.jpg" id="imgZoom">
-          <div class="icon-zoom"> 
-            <i class="bi bi-search"></i>
+          <div class="buttons">
+            <button id="prev"><</button>
+                <button id="next">></button>
           </div>
+          <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
-
       </div>
       <div style="height: fit-content;"></div>
     </main>
+    <script>
+      let slider = document.querySelector('.slider .list');
+      let items = document.querySelectorAll('.slider .list .item');
+      let next = document.getElementById('next');
+      let prev = document.getElementById('prev');
+      let dots = document.querySelectorAll('.slider .dots li');
+
+      let lengthItems = items.length - 1;
+      let active = 0;
+      next.onclick = function () {
+        active = active + 1 <= lengthItems ? active + 1 : 0;
+        reloadSlider();
+      }
+      prev.onclick = function () {
+        active = active - 1 >= 0 ? active - 1 : lengthItems;
+        reloadSlider();
+      }
+      let refreshInterval = setInterval(() => { next.click() }, 3000);
+      function reloadSlider() {
+        slider.style.left = -items[active].offsetLeft + 'px';
+        // 
+        let last_active_dot = document.querySelector('.slider .dots li.active');
+        last_active_dot.classList.remove('active');
+        dots[active].classList.add('active');
+
+        clearInterval(refreshInterval);
+        refreshInterval = setInterval(() => { next.click() }, 3000);
+
+
+      }
+
+      dots.forEach((li, key) => {
+        li.addEventListener('click', () => {
+          active = key;
+          reloadSlider();
+        })
+      })
+      window.onresize = function (event) {
+        reloadSlider();
+      };
+
+    </script>
 
     <footer class="footer">
       <div class="container">
