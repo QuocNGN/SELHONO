@@ -8,16 +8,16 @@
       background-size: cover;
       background-position: center;
       width: 100%;
-      margin-top: $marginTop;
       height: 758px;
       border-radius: 100px 0 100px;
+      padding: 25px;
 
       p.solgan {
          color: #fff;
          font-size: 65px;
          font-family: "DMSerifDisplay";
          font-weight: 400;
-         padding: 65px 0px 20px 20px;
+         padding-top: 65px;
          line-height: 81.25px;
       }
 
@@ -29,25 +29,7 @@
          letter-spacing: 1px;
          font-weight: 500;
          color: #fff;
-         padding-left: 20px;
-      }
-
-      button {
-         margin-top: 20px;
-         background-color: $main-color;
-         padding: 26px 49px 26px 48px;
-         margin-left: 20px;
-         border-radius: 18px;
-         outline: none;
-         border: none;
-         color: #fff;
-         font-weight: 600;
-         font-size: 18px;
-         letter-spacing: 1px;
-
-         i.bi-arrow-right {
-            font-weight: bolder;
-         }
+         margin-bottom: 56px;
       }
    }
 }
@@ -64,14 +46,18 @@
          width: 360px;
          height: 225px;
          text-align: center;
-
+         &:hover p, &:hover a {
+            color: $main-color;
+         }
+         
          p.title {
             font-family: "DMSerifDisplay";
             font-size: 25px;
             padding-bottom: 0px;
          }
-
+         
          p {
+            transition: .3s ease;
             font-size: 22px;
             font-family: "fJost-400";
             font-weight: 400;
@@ -88,6 +74,7 @@
             font-family: "fJost-400";
             font-weight: 600;
             color: #4d5053;
+            transition: .3s ease;
          }
       }
    }
@@ -102,13 +89,14 @@
    background-size: auto 100%;
    height: 700px;
    margin-top: $marginTop;
+   padding: 25px;
 
    p.solgan {
       color: #fff;
       font-size: 55px;
       font-family: "DMSerifDisplay";
       font-weight: 400;
-      padding: 140px 0px 20px 20px;
+      padding-top: 140px;
       line-height: 69px;
    }
 
@@ -119,16 +107,15 @@
       letter-spacing: 1px;
       font-weight: 500;
       color: #fff;
-      padding-left: 20px;
    }
 
    .contact-info {
       margin-top: 20px;
 
       .contact-info__item {
-         margin-left: 20px;
          display: flex;
          align-items: center;
+         margin-bottom: 76px;
 
          i.bi-telephone {
             padding: 25px 30px;
@@ -149,24 +136,6 @@
             span {
                font-size: 22px;
             }
-         }
-      }
-
-      button {
-         margin-top: 40px;
-         background-color: $main-color;
-         padding: 26px 49px 26px 48px;
-         margin-left: 20px;
-         border-radius: 18px;
-         outline: none;
-         border: none;
-         color: #fff;
-         font-weight: 600;
-         font-size: 18px;
-         letter-spacing: 1px;
-
-         i.bi-arrow-right {
-            font-weight: bolder;
          }
       }
    }
@@ -383,6 +352,13 @@
       box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
       width: 380px;
       cursor: pointer;
+      transition: .3s ease;
+      &:hover {
+         background-color: #f4f0ec;
+         .btn-main-circle {
+            background-color: #C76904;
+         }
+      }
 
       &__img {
          background:
@@ -451,10 +427,7 @@
       }
    }
 }
-// Select active JS
-.selected {
-   background-color: #f4f0ec;
-}
+
 
 .banner-footer {
    margin: 0 !important;

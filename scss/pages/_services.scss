@@ -60,9 +60,18 @@
          position: relative;
          display: flex;
          justify-content: space-between;
+         align-items: center;
          column-gap: 93px;
+         margin-top: 121px;
+         &:nth-child(even) {
+            flex-direction: row-reverse;
+            .numTitle {
+               left: 0;
+            }
+         }
          &__inner {
-            transform: translateY(50%);
+            // transform: translateY(60%);
+            padding-top: 150px;
             .title {
                font-size: 35px;
                @include FontDMSerifTitle;
@@ -80,15 +89,9 @@
             color: #c76904;
             font-size: 90px;
             font-style: normal;
-            line-height: 150%;
+            line-height: 0;
             letter-spacing: 0.9px;
          }
-      }
-      &-item:nth-child(odd) .numTitle {
-         @include absoluteDirection("right");
-      }
-      &-item:nth-child(even) .numTitle {
-         @include absoluteDirection("left");
       }
    }
 }

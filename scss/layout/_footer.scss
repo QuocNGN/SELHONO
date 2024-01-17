@@ -8,28 +8,32 @@
         display: flex;
         justify-content: space-between;
         &-socails {
-            .logo {
-                display: flex;
-                align-items: center;
-                .img {
-                    width: 50px;
-                    height: 50px;
-                    padding: 10px;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
+            a {
+                text-decoration: none;
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    .img {
+                        width: 50px;
+                        height: 50px;
+                        padding: 10px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    span {
+                        margin-left: 7px;
+                        color: #292f36;
+                        @include fontDMSerif400;
+                        font-size: 40px;
+                        font-style: normal;
+                        line-height: 125%; /* 50px */
                     }
                 }
-                span {
-                    margin-left: 7px;
-                    color: #292f36;
-                    @include fontDMSerif400;
-                    font-size: 40px;
-                    font-style: normal;
-                    line-height: 125%; /* 50px */
-                }
             }
+
             .slogan {
                 margin-top: 18px;
                 color: #4d5053;
@@ -43,15 +47,21 @@
                 margin-top: 31px;
                 display: flex;
                 column-gap: 54px;
-                i {
-                    color: #292f36;
-                    text-align: center;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 120%;
-                    letter-spacing: 0.99px;
-                    text-transform: uppercase;
+                a {
+                    i {
+                        color: #292f36;
+                        text-align: center;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: 0.99px;
+                        text-transform: uppercase;
+                        transition: 0.3s;
+                    }
+                    &:hover i {
+                        color: $main-hover-btn-sm;
+                    }
                 }
             }
         }
@@ -65,13 +75,44 @@
         &-pages,
         &-services,
         &-contact {
-            p {
-                color: #4d5053;
-                @include fontJost400;
-                font-size: 22px;
-                font-style: normal;
-                line-height: 300%;
-                letter-spacing: 0.22px;
+            a {
+                text-decoration: none;
+                p {
+                    position: relative;
+                    color: #4d5053;
+                    @include fontJost400;
+                    font-size: 22px;
+                    font-style: normal;
+                    line-height: 300%;
+                    letter-spacing: 0.22px;
+                    transition: 0.3s;
+
+                    &::after {
+                        content: "";
+                        width: 0;
+                        height: 3px;
+                        width: 0;
+                        position: absolute;
+                        left: 0;
+                        bottom: -5px;
+                        background-color: #c76904;
+                        margin: auto;
+                        display: block;
+                        transition: 0.3s;
+                    }
+                    &:hover {
+                        color: #c76904;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                    &.active {
+                        color: #c76904;
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
         &-contact {

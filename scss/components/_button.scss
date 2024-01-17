@@ -1,3 +1,47 @@
-.btn {
-    
+@import "../base/font";
+@import "../abstracts/variable";
+@import "../abstracts/minxin";
+
+.btn-main {
+    text-decoration: none;
+    background-color: $main-color;
+    padding: 26px 49px 26px 48px;
+    border-radius: 18px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: .3s;
+    cursor: pointer;
+
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    i.bi-arrow-right {
+        font-weight: bolder;
+    }
+    &:hover {
+        background-color: $main-hover-color;
+        color: #fff;
+    }
+}
+
+.btn-main-circle {
+    width: 70px;
+    height: 70px;
+    background-color: $main-color;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    i {
+        color: #fff;
+        font-size: 32px;
+        @include fontDMSerif400;
+        font-weight: bolder;
+    } &:hover {
+        background-color: $main-hover-btn-sm;
+        color: #fff;
+    }
 }
