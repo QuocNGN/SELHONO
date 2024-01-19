@@ -86,25 +86,8 @@
                     line-height: 300%;
                     letter-spacing: 0.22px;
                     transition: 0.3s;
-
-                    &::after {
-                        content: "";
-                        width: 0;
-                        height: 3px;
-                        width: 0;
-                        position: absolute;
-                        left: 0;
-                        bottom: -5px;
-                        background-color: #c76904;
-                        margin: auto;
-                        display: block;
-                        transition: 0.3s;
-                    }
                     &:hover {
                         color: #c76904;
-                    }
-                    &:hover::after {
-                        width: 100%;
                     }
                     &.active {
                         color: #c76904;

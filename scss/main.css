@@ -416,6 +416,51 @@ body {
   margin-top: 176px;
 }
 
+.scroll-top {
+  width: 60px;
+  height: 60px;
+  background-color: #CDA274;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ffffff;
+  border-radius: 100px;
+  z-index: 99;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+  position: fixed;
+  right: 60px;
+  bottom: 50px;
+}
+.scroll-top i {
+  color: #fff;
+  font-size: 52px;
+}
+.scroll-top:hover {
+  background-color: #C76904;
+  transform: scale(1.2);
+}
+.scroll-top.active {
+  opacity: 1;
+  visibility: visible;
+  animation: slideFromRight 0.35s ease;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    right: 0px;
+  }
+  to {
+    opacity: 0.85;
+    right: 60px;
+  }
+}
 .header {
   position: fixed !important;
   top: 0;
@@ -430,8 +475,12 @@ body {
   width: 100%;
   background-color: #fff;
   padding: 55px 0 35px !important;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   z-index: 100;
+  transition: 0.3s;
+}
+.header nav.sticky {
+  padding: 20px !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .header nav .nav-bar {
   position: relative;
@@ -787,24 +836,8 @@ body {
   letter-spacing: 0.22px;
   transition: 0.3s;
 }
-.footer__inner-pages a p::after, .footer__inner-services a p::after, .footer__inner-contact a p::after {
-  content: "";
-  width: 0;
-  height: 3px;
-  width: 0;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  background-color: #c76904;
-  margin: auto;
-  display: block;
-  transition: 0.3s;
-}
 .footer__inner-pages a p:hover, .footer__inner-services a p:hover, .footer__inner-contact a p:hover {
   color: #c76904;
-}
-.footer__inner-pages a p:hover::after, .footer__inner-services a p:hover::after, .footer__inner-contact a p:hover::after {
-  width: 100%;
 }
 .footer__inner-pages a p.active, .footer__inner-services a p.active, .footer__inner-contact a p.active {
   color: #c76904;
@@ -1034,7 +1067,7 @@ body {
   margin-top: 194px;
   height: 680px;
   background-color: #d8a876;
-  padding: 80px 30px;
+  padding: 80px 25px;
   border-radius: 80px;
 }
 .people-thoughts-block .people-thoughts-block-wrap {
@@ -1053,8 +1086,7 @@ body {
 }
 .people-thoughts-block .people-thoughts-block-wrap .people-thoughts-block__item {
   background-color: #fff;
-  max-width: 370px;
-  width: 100%;
+  width: 32%;
   height: 340px;
   margin-top: 20px;
   border-radius: 20px;
@@ -1469,7 +1501,6 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: red;
 }
 .accordion .slide-wrapper .slide .content {
   position: absolute;
@@ -1570,6 +1601,32 @@ body {
 }
 .accordion ul.dots li.active {
   width: 40px;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 350px;
+  background: linear-gradient(90deg, rgb(9, 28, 121) 0%, rgb(255, 0, 194) 100%);
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+swiper-container {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main .aboutUs-wrapper .think-feel {
@@ -4884,7 +4941,6 @@ body {
   }
 }
 .main .testSlider-wrapper .slider {
-  width: 100%;
   max-width: 100vw;
   height: 356px;
   margin: auto;
@@ -4892,21 +4948,28 @@ body {
   overflow: hidden;
 }
 .main .testSlider-wrapper .slider .list {
-  position: absolute;
-  width: -moz-max-content;
-  width: max-content;
-  height: 100%;
-  left: 0;
-  top: 0;
   display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  height: 100%;
+  justify-content: center;
   transition: 1s;
 }
-.main .testSlider-wrapper .slider .list .list img {
+.main .testSlider-wrapper .slider .list .item {
+  position: relative;
+}
+.main .testSlider-wrapper .slider .list .item img {
   width: 100%;
-  max-width: 100vw;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main .testSlider-wrapper .slider .list .item.activeOpen {
+  flex-grow: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid red;
 }
 .main .testSlider-wrapper .slider .buttons {
   position: absolute;

@@ -9,15 +9,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-  <link rel="stylesheet" href="scss/main.css" />
+
 
   <!-- bootstrap css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
   <!-- bootstrap icon cdn -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
   <script src="js/jquery.zaccordion.js"></script>
+  <link rel="stylesheet" href="scss/main.css" />
+  
 </head>
 
 <body>
@@ -43,7 +49,7 @@
       </div>
     </header>
     <!-- HEADER: END -->
-    <main class="main container">
+    <main class="main">
       <div class="testSlider-wrapper">
         <div class="slider">
           <div class="list">
@@ -56,11 +62,17 @@
             <div class="item">
               <img src="img/ABOUT_US/slider3.avif" alt="">
             </div>
-            <div class="item">
+            <div class="item activeOpen">
               <img src="img/ABOUT_US/slider4.avif" alt="">
             </div>
             <div class="item">
               <img src="img/ABOUT_US/slider5.avif" alt="">
+            </div>
+            <div class="item">
+              <img src="img/ABOUT_US/slider6.avif" alt="">
+            </div>
+            <div class="item">
+              <img src="img/ABOUT_US/slider7.avif" alt="">
             </div>
           </div>
           <div class="buttons">
@@ -78,100 +90,15 @@
       </div>
       <div style="height: fit-content;"></div>
     </main>
-    <script>
-      let slider = document.querySelector('.slider .list');
-      let items = document.querySelectorAll('.slider .list .item');
-      let next = document.getElementById('next');
-      let prev = document.getElementById('prev');
-      let dots = document.querySelectorAll('.slider .dots li');
-
-      let lengthItems = items.length - 1;
-      let active = 0;
-      next.onclick = function () {
-        active = active + 1 <= lengthItems ? active + 1 : 0;
-        reloadSlider();
-      }
-      prev.onclick = function () {
-        active = active - 1 >= 0 ? active - 1 : lengthItems;
-        reloadSlider();
-      }
-      let refreshInterval = setInterval(() => { next.click() }, 3000);
-      function reloadSlider() {
-        slider.style.left = -items[active].offsetLeft + 'px';
-        // 
-        let last_active_dot = document.querySelector('.slider .dots li.active');
-        last_active_dot.classList.remove('active');
-        dots[active].classList.add('active');
-
-        clearInterval(refreshInterval);
-        refreshInterval = setInterval(() => { next.click() }, 3000);
 
 
-      }
-
-      dots.forEach((li, key) => {
-        li.addEventListener('click', () => {
-          active = key;
-          reloadSlider();
-        })
-      })
-      window.onresize = function (event) {
-        reloadSlider();
-      };
-
-    </script>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__inner-socails">
-            <div class="logo">
-              <div class="img">
-                <img src="img/SELHONO_LOGO.png" alt="">
-              </div>
-              <span>SELHONO</span>
-            </div>
-            <p class="slogan">
-              It is a long established fact that a reader <br> will be distracted lookings.
-            </p>
-            <div class="footer__inner-socails-icons">
-              <i class="bi bi-facebook"></i>
-              <i class="bi bi-twitter"></i>
-              <i class="bi bi-linkedin"></i>
-              <i class="bi bi-instagram"></i>
-            </div>
-          </div>
-          <div class="footer__inner-pages">
-            <p class="title">Pages</p>
-            <p>About Us</p>
-            <p>Our Projects</p>
-            <p>Our Team</p>
-            <p>Contact Us</p>
-            <p>Services</p>
-          </div>
-          <div class="footer__inner-services">
-            <p class="title">Services</p>
-            <p>Kitchen</p>
-            <p>Living Area</p>
-            <p>Bathroom</p>
-            <p>Dinning Hall</p>
-            <p>Bedroom</p>
-          </div>
-          <div class="footer__inner-contact">
-            <p class="title">Contact</p>
-            <p>55 East Birchwood Ave. <br> Brooklyn, New York 11201</p>
-            <p>contact@selhono.com</p>
-            <p>(123) 456 - 7890</p>
-          </div>
-        </div>
-        <p class="copyright">Copyright © SELHONO </p>
-      </div>
-    </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="js/main.js" async></script>
 </body>
 

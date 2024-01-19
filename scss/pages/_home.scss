@@ -145,13 +145,14 @@
    margin-top: 194px;
    height: 680px;
    background-color: #d8a876;
-   padding: 80px 30px;
+   padding: 80px 25px;
    border-radius: 80px;
 
    .people-thoughts-block-wrap {
       display: flex;
       justify-content: space-between;
       column-gap: 20px;
+      // border: 1px solid red;
 
       p.title {
          font-size: 50px;
@@ -164,8 +165,8 @@
 
       .people-thoughts-block__item {
          background-color: #fff;
-         max-width: 370px;
-         width: 100%;
+         // max-width: 370px;
+         width: 32%;
          height: 340px;
          margin-top: 20px;
          border-radius: 20px;

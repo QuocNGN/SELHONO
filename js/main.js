@@ -228,13 +228,48 @@
 //     }
 // });
 
+// GASP
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollTrigger.normalizeScroll(true)
+
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+    smooth: 2,
+    effects: true,
+    normalizeScroll: true
+});
+
+// pin box-c when it reaches the center of the viewport, for 300px
+ScrollTrigger.create({
+    trigger: ".box-c",
+    pin: true,
+    start: "center center",
+    end: "+=300",
+    markers: true
+});
+
+document.querySelector("button").addEventListener("click", e => {
+    // scroll to the spot where .box-c is in the center.
+    // parameters: element, smooth, position
+    smoother.scrollTo(".box-c", true, "center center");
+
+    // or you could animate the scrollTop:
+    // gsap.to(smoother, {
+    //  scrollTop: smoother.offset(".box-c", "center center"),
+    //  duration: 1
+    // });
+});
+
 $(document).ready(function () {
     $(window).scroll(function () {
         console.log($(window).scrollTop());
         if ($(window).scrollTop() > 200) {
-            $(".search").addClass("sticky");
+            $(".header nav").addClass("sticky");
+            $(".scroll-top").addClass("active");
         } else {
-            $(".search").removeClass("sticky");
+            $(".header nav").removeClass("sticky");
+            $(".scroll-top").removeClass("active");
         }
     });
 
@@ -249,6 +284,48 @@ $(document).ready(function () {
         clickedFaq.toggleClass("active");
     });
 
+    /* -------------------------------------------------------------
+        ================ About Us - Slider
+    -----------------------------------------------------------------*/
+    // let slider = document.querySelector('.slider .list');
+    // let items = document.querySelectorAll('.slider .list .item');
+    // let next = document.getElementById('next');
+    // let prev = document.getElementById('prev');
+    // let dots = document.querySelectorAll('.slider .dots li');
+
+    // let lengthItems = items.length - 1;
+    // let active = 0;
+    // next.onclick = function () {
+    //     active = active + 1 <= lengthItems ? active + 1 : 0;
+    //     reloadSlider();
+    // }
+    // prev.onclick = function () {
+    //     active = active - 1 >= 0 ? active - 1 : lengthItems;
+    //     reloadSlider();
+    // }
+    // let refreshInterval = setInterval(() => { next.click() }, 3000);
+    // function reloadSlider() {
+    //     slider.style.left = -items[active].offsetLeft + 'px';
+    //     // 
+    //     let last_active_dot = document.querySelector('.slider .dots li.active');
+    //     last_active_dot.classList.remove('active');
+    //     dots[active].classList.add('active');
+
+    //     clearInterval(refreshInterval);
+    //     refreshInterval = setInterval(() => { next.click() }, 3000);
+
+
+    // }
+
+    // dots.forEach((li, key) => {
+    //     li.addEventListener('click', () => {
+    //         active = key;
+    //         reloadSlider();
+    //     })
+    // })
+    // window.onresize = function (event) {
+    //     reloadSlider();
+    // };
     /* -------------------------------------------------------------
         ================ TeamSingle - accordion
     -----------------------------------------------------------------*/
