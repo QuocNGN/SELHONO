@@ -3,6 +3,10 @@
 @import "../abstracts/minxin";
 
 .main {
+   @media screen and (max-width: 739px) {
+      padding: 0 16px !important;
+   }
+
    .banner {
       background: url("/img/HOME/banner.png") no-repeat;
       background-size: cover;
@@ -10,7 +14,22 @@
       width: 100%;
       height: 758px;
       border-radius: 100px 0 100px;
-      padding: 25px;
+      padding: 0 16px;
+
+      @media screen and (max-width: 739px) {
+         max-width: 100% !important;
+         width: 100%;
+         height: 270px;
+         border-radius: 50px 0 50px;
+
+         p.solgan {
+            font-size: 28px !important;
+            line-height: 125% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            padding-top: 50px !important;
+         }
+      }
 
       p.solgan {
          color: #fff;
@@ -23,13 +42,21 @@
 
       p.small-desc {
          font-size: 65px;
-         font-size: 22px;
          font-family: "fInter-500";
          line-height: 33px;
          letter-spacing: 1px;
          font-weight: 500;
          color: #fff;
          margin-bottom: 56px;
+
+         @media screen and (max-width: 739px) {
+            font-size: 12px !important;
+            font-style: normal;
+            line-height: 150% !important;
+            letter-spacing: 0.12px !important;
+            margin: 12px 0 !important;
+            margin-bottom: 24px !important;
+         }
       }
    }
 }
@@ -38,24 +65,50 @@
    margin-top: 95px;
    padding: 0 60px;
 
+   @media screen and (max-width: 739px) {
+      padding: 0 16px !important;
+      margin-top: 32px !important;
+   }
+
+
    .info-block-wrap {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      column-gap: 24px;
+      row-gap: 24px;
 
       .info-block__item {
          width: 360px;
          height: 225px;
          text-align: center;
-         &:hover p, &:hover a {
+
+         @media screen and (max-width: 739px) {
+            max-width: 48% !important;
+            width: 190px;
+            padding: 0 !important;
+         }
+
+         &:hover p,
+         &:hover a {
             color: $main-color;
          }
-         
+
          p.title {
             font-family: "DMSerifDisplay";
             font-size: 25px;
             padding-bottom: 0px;
+            text-align: center;
+
+            @media screen and (max-width: 739px) {
+               @include FontDMSerifTitle;
+               font-size: 25px !important;
+               font-style: normal;
+               font-weight: 400;
+               line-height: 125% !important;
+            }
+
          }
-         
+
          p {
             transition: .3s ease;
             font-size: 22px;
@@ -65,6 +118,14 @@
             line-height: 33px;
             padding-bottom: 40px;
             letter-spacing: 1px;
+
+            @media screen and (max-width: 739px) {
+               font-size: 14px !important;
+               text-align: center;
+               line-height: 150% !important;
+               letter-spacing: 0.14px;
+            }
+
          }
 
          a {
@@ -75,6 +136,11 @@
             font-weight: 600;
             color: #4d5053;
             transition: .3s ease;
+
+            @media screen and (max-width: 739px) {
+               margin-top: 30px !important;
+            }
+
          }
       }
    }
@@ -91,6 +157,15 @@
    margin-top: $marginTop;
    padding: 25px;
 
+   @media screen and (max-width: 739px) {
+      font-size: 14px !important;
+      line-height: 125% !important;
+      text-align: justify;
+      height: 520px !important;
+      margin-top: 30px !important;
+   }
+
+
    p.solgan {
       color: #fff;
       font-size: 55px;
@@ -98,6 +173,11 @@
       font-weight: 400;
       padding-top: 140px;
       line-height: 69px;
+
+      @media screen and (max-width: 739px) {
+         font-size: 32px !important;
+         line-height: 125% !important;
+      }
    }
 
    p.small-desc {
@@ -107,6 +187,12 @@
       letter-spacing: 1px;
       font-weight: 500;
       color: #fff;
+
+      @media screen and (max-width: 739px) {
+         font-size: 14px !important;
+         line-height: 150% !important;
+         letter-spacing: 0.14px !important;
+      }
    }
 
    .contact-info {
@@ -117,12 +203,21 @@
          align-items: center;
          margin-bottom: 76px;
 
+         @media screen and (max-width: 739px) {
+            margin-bottom: 50px;
+         }
+
          i.bi-telephone {
             padding: 25px 30px;
             border-radius: 1600px;
             color: $main-color;
             background-color: #fff;
             font-size: 30px;
+
+            @media screen and (max-width: 739px) {
+               padding: 15px !important;
+               font-size: 24px;
+            }
          }
 
          p {
@@ -132,6 +227,14 @@
             letter-spacing: 1px;
             color: #fff;
             font-weight: 700;
+
+            @media screen and (max-width: 739px) {
+               font-size: 16px !important;
+
+               span {
+                  font-size: 14px !important;
+               }
+            }
 
             span {
                font-size: 22px;
@@ -148,6 +251,13 @@
    padding: 80px 25px;
    border-radius: 80px;
 
+   @media screen and (max-width: 739px) {
+      height: fit-content;
+      border-radius: 70px;
+      margin-top: 32px !important;
+   }
+
+
    .people-thoughts-block-wrap {
       display: flex;
       justify-content: space-between;
@@ -161,6 +271,13 @@
          font-weight: 400;
          letter-spacing: 2px;
          color: #fff;
+
+         @media screen and (max-width: 739px) {
+            font-size: 32px;
+            font-style: normal;
+            line-height: 125%;
+            letter-spacing: 0.64px;
+         }
       }
 
       .people-thoughts-block__item {
@@ -172,6 +289,10 @@
          border-radius: 20px;
          padding: 35px;
          padding-top: 53px;
+
+         @media screen and (max-width: 739px) {
+            width: 100%;
+         }
 
          .info {
             .info-heading {
@@ -188,6 +309,12 @@
                   font-weight: bold;
                   font-size: 22px;
                   font-family: "DMSerifDisplay";
+
+                  @media screen and (max-width: 739px) {
+                     font-size: 25px !important;
+                     letter-spacing: 0.25px !important;
+                     margin-left: 25px !important;
+                  }
 
                   span {
                      font-size: 18px;
@@ -216,6 +343,28 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+
+   @media screen and (max-width: 739px) {
+      padding-left: 50px !important;
+      column-gap: 50px;
+      margin-top: 60px !important;
+      scroll-behavior: auto;
+      overflow-y: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+         display: none;
+      }
+
+      .sponsor-left {
+         img {
+            padding-left: 50px !important;
+         }
+      }
+   }
+
 }
 
 .appeal {
@@ -225,11 +374,22 @@
    flex-direction: column;
    align-items: center;
 
+   @media screen and (max-width: 739px) {
+      margin-top: 32px;
+      padding: 0 16px !important;
+   }
+
    &-title {
       @include fontDMSerif400;
       font-size: 60px;
       line-height: 75px;
       letter-spacing: 0.32px;
+
+      @media screen and (max-width: 739px) {
+         font-size: 32px;
+         line-height: 125%;
+         letter-spacing: 0.64px;
+      }
    }
 
    &-content {
@@ -239,11 +399,33 @@
       letter-spacing: 0.16px;
       color: #4d5053;
       max-width: 737px;
+
+      &-sm {
+         display: none;
+      }
+
+      @media screen and (max-width: 739px) {
+         font-size: 14px;
+         line-height: 150%;
+         letter-spacing: 0.14px;
+         font-style: normal;
+         display: none;
+
+         &-sm {
+            display: block;
+         }
+      }
    }
 }
 
 .list-bedRoom {
    margin-top: 114px;
+
+   @include mobile {
+      margin-top: 32px;
+      padding: 0 16px !important;
+   }
+
 
    .list-bedRoom-container {
       display: flex;
@@ -253,11 +435,22 @@
       .list-bedRoom-item {
          max-width: 550px !important;
 
+         @include mobile {
+            &:not(:first-child) {
+               margin-top: 32px;
+            }
+         }
+
          .img-room {
             width: 100%;
             object-fit: cover;
             height: 548px;
             border-radius: 0px 270px 0px 0px !important;
+
+            @include mobile {
+               width: 100% !important;
+               height: 450px;
+            }
          }
 
          &__inner {
@@ -301,13 +494,32 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-wrap: wrap;
    column-gap: 70px;
+
+   @include mobile {
+      margin-top: 32px;
+      column-gap: 0;
+      row-gap: 32px;
+   }
 
    &-item {
       width: 254px;
 
+      @include mobile {
+         width: 48%;
+         margin: 0 auto;
+         display: flex;
+         justify-content: center;
+         margin-top: 32px;
+      }
+
       &__inner {
          text-align: center;
+
+         @include mobile {
+            width: 100% !important;
+         }
 
          p {
             @include fontDMSerif400;
@@ -315,6 +527,12 @@
             line-height: 125%;
             letter-spacing: 1.7px;
             color: #cda274;
+
+            @include mobile {
+               font-size: 64px;
+               line-height: 125%;
+               letter-spacing: 1.28px;
+            }
          }
 
          span {
@@ -323,6 +541,13 @@
             line-height: 150%;
             letter-spacing: 0.22px;
             color: #4d5053;
+
+            @include mobile {
+               font-size: 14px;
+               font-style: normal;
+               line-height: 150%;
+               letter-spacing: 0.14px;
+            }
          }
       }
    }
@@ -330,11 +555,22 @@
    .splash {
       border: 1px solid $main-color;
       height: 130px;
+
+      @include mobile {
+         &.splash-sm {
+            display: none;
+            height: 100% !important;
+         }
+      }
    }
 }
 
 .appeal-custom {
    margin-top: 373px;
+
+   @include mobile {
+      margin-top: 32px;
+   }
 
    .appeal-content-custom {
       max-width: 811px;
@@ -343,8 +579,13 @@
 
 .list-areaRoom-design {
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
    margin-top: 130px;
+
+   @include mobile {
+      margin-top: 32px;
+   }
 
    .areaRoom-design-item {
       padding: 21px;
@@ -354,8 +595,14 @@
       width: 380px;
       cursor: pointer;
       transition: .3s ease;
+
+      @include mobile {
+         width: 100%;
+      }
+
       &:hover {
          background-color: #f4f0ec;
+
          .btn-main-circle {
             background-color: #C76904;
          }
@@ -369,6 +616,10 @@
          height: 290px;
          border-radius: 40px 40px 0 0;
          position: relative;
+
+         @include mobile {
+            height: 370px !important;
+         }
 
          .shortDesc {
             display: flex;
@@ -436,10 +687,21 @@
    margin-top: 120px !important;
    box-sizing: border-box;
    background-image: url("/img/HOME/banner-footer.svg");
+   background-repeat: no-repeat;
+   object-fit: cover;
    height: 430px;
+
+   @include mobile {
+      margin-top: 32px !important;
+      height: 510px !important;
+      background-position: center;
+      box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.5);
+   }
+
    &-content {
       padding-top: 80px;
       text-align: center;
+
       .title {
          color: #fff;
          text-align: center;
@@ -448,6 +710,7 @@
          font-style: normal;
          line-height: 125%;
       }
+
       .desc {
          margin-top: 11px;
          color: #fff;
@@ -459,6 +722,7 @@
          line-height: 150%;
          letter-spacing: 0.22px;
       }
+
       button {
          margin-top: 22px;
          border-radius: 18px;
@@ -486,11 +750,23 @@
    }
 }
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
    width: 100%;
    /* padding-right: var(--bs-gutter-x,.75rem); */
    /* padding-left: var(--bs-gutter-x,.75rem); */
    padding: 0 !important;
    margin-right: auto;
    margin-left: auto;
+}
+
+@media screen and (max-width: 739px) {
+   .container {
+      max-width: 100% !important;
+   }
 }
