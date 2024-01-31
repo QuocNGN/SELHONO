@@ -32,8 +32,8 @@
     <header class="header">
       <nav>
         <div class="nav-bar container">
-          <i class='bx bx-menu sidebarOpen'></i>
-          <div class="logo navLogo">
+          <i class='bx bx-menu sidebarOpen' id="menuToggle"></i>
+          <div class="logo navLogo navLogo-sm">
             <img src="img/SELHONO_LOGO.png" alt="">
             <a href="#">SELHONO</a>
           </div>
@@ -43,7 +43,8 @@
               <div class="logo-toggle">
                 <div class="logo navLogo">
                   <img src="img/SELHONO_LOGO.png" alt="">
-                  <a href="#">SELHONO</a>
+                  <!-- <a href="#">SELHONO</a> -->
+                  <a href="index.html">SELHONO</a>
                 </div>
                 <i class='bx bx-x siderbarClose'></i>
               </div>
@@ -71,6 +72,13 @@
                 </div>
               </div>
             </div>
+
+            <div class="search-sm">
+              <form action="" class="form-search-sm">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+              </form>
+            </div>
           </div>
 
 
@@ -78,49 +86,49 @@
       </nav>
     </header>
     <!-- HEADER: END -->
-    <div class="services-banner" style="margin-top: 66px;">
+    <div class="services-banner">
       <p>Services</p>
     </div>
-    <main class="main container" style="margin-top: 202px;">
+    <main class="main container">
       <div class="services-wrapper">
-        <div class="info-block">
-          <div class="info-block-wrap">
-            <a href="servicesSingle.html" class="info-block-link" style="text-decoration: none;">
+        <div class="info-blocks">
+          <div class="info-blocks-wrap">
+            <a href="servicesSingle.html" class="info-blocks-link" style="text-decoration: none;">
               <div class="info-block__item">
                 <p class="title">Project Plan</p>
                 <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
                 <a href="#">Read More <i class="bi bi-arrow-right ms-3"></i></a>
               </div>
             </a>
-            <a href="servicesSingle.html" class="info-block-link" style="text-decoration: none;">
+            <a href="servicesSingle.html" class="info-blocks-link" style="text-decoration: none;">
               <div class="info-block__item">
                 <p class="title">Interior Work</p>
                 <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
                 <a href="#">Read More <i class="bi bi-arrow-right ms-3"></i></a>
               </div>
             </a>
-            <a href="servicesSingle.html" class="info-block-link" style="text-decoration: none;">
+            <a href="servicesSingle.html" class="info-blocks-link" style="text-decoration: none;">
               <div class="info-block__item">
                 <p class="title">Retail Design</p>
                 <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
                 <a href="#">Read More <i class="bi bi-arrow-right ms-3"></i></a>
               </div>
             </a>
-            <a href="servicesSingle.html" class="info-block-link" style="text-decoration: none;">
+            <a href="servicesSingle.html" class="info-blocks-link" style="text-decoration: none;">
               <div class="info-block__item">
                 <p class="title">2d/3d Art Work</p>
                 <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
                 <a href="#">Read More <i class="bi bi-arrow-right ms-3"></i></a>
               </div>
             </a>
-            <a href="servicesSingle.html" class="info-block-link" style="text-decoration: none;">
+            <a href="servicesSingle.html" class="info-blocks-link" style="text-decoration: none;">
               <div class="info-block__item">
                 <p class="title">Interior Work</p>
                 <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
                 <a href="#">Read More <i class="bi bi-arrow-right ms-3"></i></a>
               </div>
             </a>
-            <a href="servicesSingle.html" class="info-block-link" style="text-decoration: none;">
+            <a href="servicesSingle.html" class="info-blocks-link" style="text-decoration: none;">
               <div class="info-block__item">
                 <p class="title">Decoration Work</p>
                 <p>There are many variations of the passages of Lorem Ipsum available, majority.</p>
@@ -140,6 +148,7 @@
           <div class="section-content-item">
             <img src="img/Service/content1.png" alt="">
             <div class="section-content-item__inner">
+              <span class="numTitle-sm">01</span>
               <div class="title">
                 Concept & Details
               </div>
@@ -152,6 +161,7 @@
           <div class="section-content-item">
             <img src="img/Service/content2.png" alt="">
             <div class="section-content-item__inner">
+              <span class="numTitle-sm" style="text-align: end;">02</span>
               <div class="title">
                 Idea for Work
               </div>
@@ -164,6 +174,7 @@
           <div class="section-content-item section-content-item-reverse">
             <img src="img/Service/content3.png" alt="">
             <div class="section-content-item__inner">
+              <span class="numTitle-sm">03</span>
               <div class="title">
                 Design
               </div>
@@ -176,6 +187,7 @@
           <div class="section-content-item">
             <img src="img/Service/content4.png" alt="">
             <div class="section-content-item__inner">
+              <span class="numTitle-sm" style="text-align: end;">04</span>
               <div class="title">
                 Perfection
               </div>
@@ -189,11 +201,11 @@
       </div>
       <div style="height: fit-content;"></div>
     </main>
-    <div class="banner-footer container-fluid" style="margin-top: 378px !important;">
+    <div class="banner-footer container-fluid sm-Dis-none" style="margin-top: 378px !important;">
       <div class="banner-footer-content">
         <p class="title">Wanna join the interno?</p>
         <p class="desc mb-5">It is a long established fact will be distracted.</p>
-        
+
         <a class="btn-main">Contact With Us <i class="bi bi-arrow-right ms-3"></i></a>
       </div>
     </div>

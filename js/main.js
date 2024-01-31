@@ -227,6 +227,20 @@
 //         nav.classList.remove("active");
 //     }
 // });
+const menuBtn = document.getElementById('menuToggle');
+const menuCloseBtn = document.querySelector('.siderbarClose');
+const showMenuElement = document.querySelector('.wrapper-nav');
+
+menuBtn.addEventListener('click', () => {
+    showMenuElement.classList.add('active');
+    document.body.classList.add('disable-scroll'); // Thêm lớp để tắt scrolling
+});
+
+menuCloseBtn.addEventListener('click', () => {
+    showMenuElement.classList.remove('active');
+    document.body.classList.remove('disable-scroll'); // Xóa lớp để bật scrolling lại
+});
+
 
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -345,68 +359,74 @@ $(document).ready(function () {
 /* -------------------------------------------------------------
     ================ Slider: About Us
 -----------------------------------------------------------------*/
-let slider = $('.slider .list');
-let itemsList = $('.slider .list .item');
-let next = $('#next');
-let prev = $('#prev');
-let dotsSlide = $('.slider .dots li');
+// let slider = $('.slider .list');
+// let itemsList = $('.slider .list .item');
+// let next = $('#next');
+// let prev = $('#prev');
+// let dotsSlide = $('.slider .dots li');
 
-let lengthItems = itemsList.length - 1;
-let activeDemo = 0;
-let active = 0;
+// let lengthItems = itemsList.length - 1;
+// let activeDemo = 0;
+// let active = 0;
 
-next.on('click', function () {
-    active = active + 1 <= lengthItems ? activeDemo + 1 : 0;
-    reloadSlider();
-});
+// next.on('click', function () {
+//     active = active + 1 <= lengthItems ? activeDemo + 1 : 0;
+//     reloadSlider();
+// });
 
-prev.on('click', function () {
-    activeDemo = activeDemo - 1 >= 0 ? activeDemo - 1 : lengthItems;
-    reloadSlider();
-});
+// prev.on('click', function () {
+//     activeDemo = activeDemo - 1 >= 0 ? activeDemo - 1 : lengthItems;
+//     reloadSlider();
+// });
 
-let refreshInterval = setInterval(() => { next.click(); }, 3000);
+// let refreshInterval = setInterval(() => { next.click(); }, 3000);
 
-function reloadSlider() {
-    slider.css('left', -itemsList[activeDemo].offsetLeft + 'px');
+// function reloadSlider() {
+//     slider.css('left', -itemsList[activeDemo].offsetLeft + 'px');
 
-    let lastActiveDot = $('.slider .dots li.active');
-    lastActiveDot.removeClass('active');
-    dotsSlide[activeDemo].classList.add('active');
+//     let lastActiveDot = $('.slider .dots li.active');
+//     lastActiveDot.removeClass('active');
+//     dotsSlide[activeDemo].classList.add('active');
 
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(() => { next.click(); }, 3000);
-}
+//     clearInterval(refreshInterval);
+//     refreshInterval = setInterval(() => { next.click(); }, 3000);
+// }
 
-dotsSlide.on('click', function () {
-    activeDemo = dotsSlide.index(this);
-    reloadSlider();
-});
+// dotsSlide.on('click', function () {
+//     activeDemo = dotsSlide.index(this);
+//     reloadSlider();
+// });
 
-$(window).on('resize', function (event) {
-    reloadSlider();
-});
+// $(window).on('resize', function (event) {
+//     reloadSlider();
+// });
 
 /* -------------------------------------------------------------
     ================ ServicesSingle Page - Model Video
 -----------------------------------------------------------------*/
-let btnPreview = $('.icon-play');
-let clip = $('.clip');
-let btnClose = $('.closeBtn');
-let video = $('video');
+const btnPreview = document.querySelector('.play');
+const videoModal = document.querySelector('.clip');
+const btnCloseVideo = document.querySelector('.closeBtn');
+const videoOverlay = document.querySelector('.video-overlay');
 
-btnPreview.on('click', function () {
-    btnPreview.addClass('active');
-    clip.addClass('active');
-    video.get(0).play();
-    video.get(0).currentTime = 0;
+btnPreview.addEventListener('click', () => {
+    videoModal.classList.add('show');
+    console.log('click me!!!');
 });
 
-btnClose.on('click', function () {
-    btnPreview.removeClass('active');
-    clip.removeClass('active');
-    video.get(0).pause();
+btnCloseVideo.addEventListener('click', () => {
+    closeVideoModal();
 });
+
+videoOverlay.addEventListener('click', () => {
+    closeVideoModal();
+});
+
+function closeVideoModal() {
+    videoModal.classList.remove('show');
+}
+
+
 
 /* -------------------------------------------------------------
     ================ Project Page - tab Filter

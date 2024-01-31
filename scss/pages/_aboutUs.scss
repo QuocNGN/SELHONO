@@ -6,6 +6,13 @@
    margin-top: 66px !important;
    max-height: 356px;
    position: relative;
+
+   @include tablet-mobile {
+      display: none;
+   }
+   @include mobile {
+      display: none;
+   }
    .slide-wrapper {
       margin: 0 !important;
       padding: 0 !important;
@@ -136,7 +143,9 @@
       }
    }
 }
-
+.swiper-slide-wrapper {
+   margin-top: -50px;
+}
 swiper-container {
    width: 100%;
    height: 100%;
@@ -149,10 +158,18 @@ swiper-slide {
    // display: flex;
    // justify-content: center;
    // align-items: center;
-   height: 350px;
-   background: linear-gradient(90deg, rgba(9,28,121,1) 0%, rgba(255,0,194,1) 100%);
+   height: 200px;
+   background: linear-gradient(90deg, rgba(9, 28, 121, 1) 0%, rgba(255, 0, 194, 1) 100%);
 }
-
+.swiper-button-next svg,
+.swiper-button-prev svg {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   transform-origin: center;
+   color: #fff !important;
+   font-weight: bolder;
+}
 swiper-slide img {
    display: block;
    width: 100%;
@@ -167,6 +184,9 @@ swiper-container {
 
 .main {
    .aboutUs-wrapper {
+      @include mobile {
+         margin: 0 16px !important;
+      }
       .think-feel {
          margin-top: 133px;
          text-align: center;
@@ -176,6 +196,10 @@ swiper-container {
             width: 760px;
             border-right: 2px solid #000;
             border-left: 2px solid #000;
+
+            @include mobile {
+               border: none !important;
+            }
             .comment {
                color: #292f36;
                text-align: center;
@@ -184,6 +208,10 @@ swiper-container {
                font-style: normal;
                line-height: 125%;
                letter-spacing: 0.7px;
+               @include mobile {
+                  font-size: 18px;
+                  letter-spacing: 0.36px;
+               }
             }
             .author {
                margin-top: 34px;
@@ -200,12 +228,26 @@ swiper-container {
 
       .section-content {
          margin-top: 135px;
+         @include mobile {
+            margin-top: 32px !important;
+         }
          &-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
             column-gap: 40px;
+            @include mobile {
+               flex-wrap: wrap;
+               justify-content: start;
+               margin-top: 32px;
+               &:nth-child(n + 2) {
+                  margin-top: 32px;
+               }
+            }
             &__text {
+               @include mobile {
+                  margin-top: 40px;
+               }
                .title {
                   color: #292f36;
                   @include fontDMSerif400;
@@ -246,6 +288,16 @@ swiper-container {
             img {
                max-width: 720px;
                height: 500px;
+
+               @include mobile {
+                  margin-top: 32px;
+                  width: 100%;
+               }
+               @media screen and (max-width: 480px) {
+                  margin-top: 32px;
+                  width: 100%;
+                  height: 300px;
+               }
             }
          }
       }
@@ -253,13 +305,28 @@ swiper-container {
       .form-contact {
          margin-top: 296px;
          text-align: center;
+         @include mobile {
+            margin-top: 32px;
+         }
          .title {
             @include FontDMSerifTitle;
+            @include mobile {
+               font-size: 32px;
+               font-style: normal;
+               font-weight: 400;
+               line-height: 125%;
+               letter-spacing: 0.64px;
+            }
          }
          &-top {
             margin-top: 98px;
             display: flex;
             justify-content: space-between;
+            @include mobile {
+               margin-top: 48px;
+               flex-wrap: wrap;
+               row-gap: 32px;
+            }
             input {
                width: 473px;
                border: none;
@@ -268,6 +335,9 @@ swiper-container {
                @include FontJostText;
                font-size: 30px;
                letter-spacing: 0.3px;
+               @include mobile {
+                  width: 100%;
+               }
             }
          }
          .inpt-bottom {
@@ -279,6 +349,10 @@ swiper-container {
             @include FontJostText;
             font-size: 30px;
             letter-spacing: 0.3px;
+            @include mobile {
+               margin-top: 32px;
+               padding: 0;
+            }
          }
          button {
             margin-top: 51px;
@@ -296,6 +370,9 @@ swiper-container {
             font-weight: 500;
             line-height: 125%;
             letter-spacing: 0.36px;
+            @include mobile {
+               margin-bottom: 32px;
+            }
             i {
                font-size: 23px;
                font-weight: bolder;

@@ -18,9 +18,9 @@ body{
 .prevent-scroll{
   overflow: hidden;
 }
-.wrapper{
-//  overflow: hidden;
-}
+// .wrapper{
+// //  overflow: hidden;
+// }
 .container{
   max-width: 1400px;
   // width: 1440px;
@@ -68,5 +68,16 @@ body{
 @media (max-width: 739px){
   .hide-on-mobile{
       display: none !important;
+  }
+}
+
+@include mobile {
+  .sm-Dis-none {
+    display: none;
+  }
+}
+@include mobile {
+  .mt-sm {
+    margin-top: 64px;
   }
 }

@@ -32,8 +32,8 @@
     <header class="header">
       <nav>
         <div class="nav-bar container">
-          <i class='bx bx-menu sidebarOpen'></i>
-          <div class="logo navLogo">
+          <i class='bx bx-menu sidebarOpen' id="menuToggle"></i>
+          <div class="logo navLogo navLogo-sm">
             <img src="img/SELHONO_LOGO.png" alt="">
             <a href="#">SELHONO</a>
           </div>
@@ -43,7 +43,8 @@
               <div class="logo-toggle">
                 <div class="logo navLogo">
                   <img src="img/SELHONO_LOGO.png" alt="">
-                  <a href="#">SELHONO</a>
+                  <!-- <a href="#">SELHONO</a> -->
+                  <a href="index.html">SELHONO</a>
                 </div>
                 <i class='bx bx-x siderbarClose'></i>
               </div>
@@ -71,6 +72,13 @@
                 </div>
               </div>
             </div>
+
+            <div class="search-sm">
+              <form action="" class="form-search-sm">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+              </form>
+            </div>
           </div>
 
 
@@ -81,7 +89,7 @@
     <div class="serviceSingle-banner" style="margin-top: 66px;">
       <p>Single Services</p>
     </div>
-    <main class="main container" style="margin-top: 110px;">
+    <main class="main container mt-sm">
       <div class="servicesSingle-wrapper">
         <div class="section-content">
           <p class="title">We set the trends of <br>
@@ -102,18 +110,31 @@
         </div>
 
         <div class="sponsor">
-          <img src="img/HOME/sponsor.svg" alt="">
+          <a href="#">
+            <img src="img/HOME/sponsor1.png" alt="">
+          </a>
+          <a href="#">
+            <img src="img/HOME/sponsor2.png" alt="">
+          </a>
+          <a href="#">
+            <img src="img/HOME/sponsor3.png" alt="">
+          </a>
+          <a href="#" class="sponsor-left">
+            <img src="img/HOME/sponsor4.png" alt="">
+          </a>
         </div>
 
-        <div class="previewVideo icon-play" style="margin-top: 208px;;">
+        <div class="previewVideo icon-play">
           <div class="icon-play">
             <div class="play"></div>
           </div>
           <div class="clip">
-            <video src="video/homeStay.mp4" controls></video>
             <b class="closeBtn">Close</b>
+            <div class="video-overlay"></div>
+            <video src="video/homeStay.mp4" controls muted></video>
           </div>
         </div>
+        
 
         <div class="list-benefit">
           <div class="list-benefit-item">
@@ -153,7 +174,7 @@
           </div>
         </div>
 
-        <div class="fun-fact" style="margin: 151px 0 302px;">
+        <div class="fun-fact">
           <div class="fun-fact-item">
             <div class="fun-fact-item__inner">
               <p>12</p>
@@ -167,7 +188,7 @@
               <span>Success Project</span>
             </div>
           </div>
-          <span class="splash"></span>
+          <span class="splash sm-Dis-none"></span>
           <div class="fun-fact-item">
             <div class="fun-fact-item__inner">
               <p>98</p>
