@@ -59,15 +59,17 @@
 @mixin absoluteDirection($direction) {
 	position: absolute;
 
-	@if $direction == "left" {
+	@if $direction =="left" {
 		left: 0;
 		top: 0;
 	}
-	@if $direction == "right" {
+
+	@if $direction =="right" {
 		right: 0;
 		top: 0;
 	}
-	@if $direction == "center" {
+
+	@if $direction =="center" {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -91,6 +93,7 @@
 	line-height: 125%;
 	letter-spacing: 0.36px;
 	height: 75px;
+
 	i {
 		font-size: 21px;
 	}
@@ -110,17 +113,26 @@
 	align-items: center;
 	justify-content: center;
 
-	// @content; // Chèn nội dung của mixin ở đây
+	background-position: center;
+	margin-top: -60px !important;
+
+	@include mobile {
+		height: 200px;
+		font-size: 55px;
+	}
+
 }
 
 @mixin footerDateBtn {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 	span {
 		@include FontJostText;
 		font-size: 16px;
 	}
+
 	button {
 		border: none;
 		outline: none;
@@ -132,5 +144,3 @@
 		background-color: #f4f0ec;
 	}
 }
-
-

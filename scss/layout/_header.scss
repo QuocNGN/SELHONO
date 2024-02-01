@@ -62,6 +62,7 @@
   to {
     opacity: 0.85;
     right: 60px;
+
     @media screen and (max-width: 739px) {
       right: 30px !important;
     }
@@ -90,12 +91,17 @@
       padding: 0 !important;
       // background-color: red;
       // background-color: rgba(181, 142, 100, 1);
-      background-color: #b58e64;
+      background-color: #d2b48c;
     }
 
     &.sticky {
       padding: 20px !important;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      
+      @include mobile {
+        padding: 10px !important;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
     }
 
     .nav-bar {
@@ -111,7 +117,7 @@
       @media screen and (max-width: 739px) {
         // display: none;
         // background-color: $main-hover-color;
-        background-color: #b58e64;
+        background-color: #d2b48c;
         display: flex;
         flex-direction: column;
       }
@@ -143,6 +149,7 @@
           a {
             filter: drop-shadow(7px 2px 3px rgba(0, 0, 0, .25))
           }
+
           img {
             width: 35px;
             filter: drop-shadow(5px 2px 3px rgba(0, 0, 0, .25))
@@ -154,7 +161,7 @@
           font-size: 40px;
           text-decoration: none;
 
-          @include mobile{
+          @include mobile {
             font-size: 36px;
             color: #fff;
           }
@@ -165,9 +172,10 @@
         display: flex;
         align-items: center;
         column-gap: 70px;
+
         @include mobile {
           display: none;
-          
+
           &.active {
             display: block;
             position: fixed;
@@ -179,20 +187,23 @@
 
             .menu {
               z-index: 99;
+
               .logo-toggle {
                 padding: 16px;
                 display: flex;
                 justify-content: space-between;
                 padding-top: 30px;
               }
+
               .nav-links {
                 margin: 0 !important;
                 padding: 0;
+
                 li a {
                   color: #fff;
                   font-size: 25px;
                   display: block;
-                  padding: 10px 0;
+                  // padding: 10px 0;
                 }
               }
             }
@@ -200,11 +211,13 @@
             .search-sm {
               margin-top: 20px;
               display: block;
+
               .form-search-sm {
                 width: 90%;
                 margin: 0 auto;
                 position: relative;
                 height: 50px;
+
                 input {
                   width: 100%;
                   height: 100%;
@@ -213,6 +226,7 @@
                   padding: 10px 35px 10px 10px;
                   border-radius: 5px;
                 }
+
                 i.bx-search {
                   position: absolute;
                   right: 15px;
@@ -230,6 +244,7 @@
           .logo-toggle {
             display: none;
             padding: 0 10px;
+
             .navLogo {
               a {
                 color: #fff;
@@ -246,10 +261,11 @@
             display: flex;
             align-items: center;
             column-gap: 60px;
+            
 
             @include mobile {
               flex-direction: column;
-              row-gap: 30px;
+              row-gap: 15px;
             }
 
             li {
@@ -257,6 +273,9 @@
               transform: 0.3s ease;
 
               @include mobile {
+                width: 100%;
+                text-align: center;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
                 &:first-child {
                   margin-top: 32px;
                 }
@@ -308,6 +327,7 @@
               &.active {
                 a {
                   color: #c76904;
+
                   @include mobile {
                     font-weight: bolder;
                   }
@@ -328,9 +348,11 @@
           @include tablet-mobile {
             display: none;
           }
+
           @include mobile {
             display: none;
           }
+
           .searchBox {
             position: relative;
 
@@ -361,7 +383,7 @@
                   pointer-events: none;
                 }
 
-                ~ .search-field {
+                ~.search-field {
                   bottom: -74px;
                   opacity: 1;
                   pointer-events: auto;
@@ -445,6 +467,7 @@
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }

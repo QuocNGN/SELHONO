@@ -5,22 +5,6 @@
 .project-banner {
    @include commonBannerStyles;
    background-image: url("/img/Pricing/Banner.svg");
-   background-position: center;
-   color: #fff;
-   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-   @include fontDMSerif400;
-   font-size: 70px;
-   font-style: normal;
-   line-height: 125%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-top: -60px !important;
-
-   @include mobile {
-      height: 200px;
-      font-size: 55px;
-   }
 }
 .main {
    .project-wrapper {
@@ -43,7 +27,7 @@
             overflow: hidden;
             @include mobile {
                width: 100%;
-               max-width: 400px;
+               // max-width: 400px;
             }
             & > a.btn-filter-tab {
                max-width: 220px;
@@ -59,8 +43,8 @@
                height: 100%;
                font-weight: 600;
                @include mobile {
-                  width: 100px !important;
-                  max-width: 180px !important;
+                  width: 100% !important;
+                  max-width: 100% !important;
                }
                &.active {
                   background-color: #cda274;
@@ -80,7 +64,9 @@
                margin: 0;
                margin-top: 38px;
                @include mobile {
+                  margin-top: 64px !important;
                   max-width: 100% !important;
+                  margin: auto;
                }
                a {
                   .img-room-zoom {
@@ -89,6 +75,9 @@
                      height: 700px;
                      overflow: hidden;
                      border-radius: 10px 10px 0 0;
+                     @include mobile {
+                        height: 550px !important;
+                     }
 
                      .img-room {
                         width: 100%;
