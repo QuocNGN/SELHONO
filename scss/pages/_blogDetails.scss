@@ -13,9 +13,16 @@
          display: flex;
          justify-content: space-between;
          column-gap: 150px;
+         @include mobile {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+         }
          &__sidebar {
             min-width: 370px;
             max-width: 400px;
+            @include mobile {
+               max-width: initial !important;
+            }
             .blog-details-search {
                width: 100%;
                height: 100px;
@@ -26,6 +33,10 @@
                padding: 34px;
                display: flex;
                align-items: center;
+               @include mobile {
+                  margin-top: 64px;
+                  height: 80px;
+               }
                input {
                   width: 100%;
                   // border-radius: 20px;
@@ -70,8 +81,9 @@
                justify-content: center;
                flex-direction: column;
                margin-top: 50px;
-               // margin: auto;
-               // padding: 27px 32px;
+               @include mobile {
+                  align-items: start;
+               }
                span {
                   width: 280px;
                   @include FontDMSerifTitle;
@@ -82,6 +94,9 @@
                   list-style-type: none;
                   padding: 0;
                   margin: 0;
+                  @include mobile {
+                     width: 100%;
+                  }
                   li {
                      @include FontJostText;
                      line-height: 300%;
@@ -95,6 +110,9 @@
             }
             &-tags {
                margin-top: 50px;
+               @include mobile {
+                  margin-top: 64px;
+               }
                span {
                   @include FontDMSerifTitle;
                   font-size: 25px;
@@ -126,16 +144,29 @@
          }
          &__right-info {
             min-width: 700px;
+            @include mobile {
+               min-width: initial !important;
+            }
             .heading {
                @include FontDMSerifTitle;
+               @include mobile {
+                  font-size: 32px;
+                  margin-bottom: 32px;
+               }
             }
             img {
                width: 100%;
                height: 530px;
+               @include mobile {
+                  height: auto;
+               }
             }
             .desc {
                margin-top: 41px;
                @include FontJostText;
+               @include mobile {
+                  font-size: 14px;
+               }
             }
          }
       }
@@ -145,13 +176,23 @@
          display: flex;
          justify-content: space-between;
          column-gap: 50px;
+         @include mobile {
+            margin-top: 64px;
+            flex-wrap: wrap;
+         }
          &-content {
             .heading {
                @include FontDMSerifTitle;
+               @include mobile {
+                  font-size: 32px;
+               }
             }
             .desc {
                @include FontJostText;
                margin-top: 20px;
+               @include mobile {
+                  font-size: 14px;
+               }
             }
             ol {
                color: #cda274;
@@ -161,10 +202,19 @@
                li {
                   margin-top: 32px;
                   @include FontJostText;
+                  @include mobile {
+                     font-size: 14px;
+                  }
                }
                li::marker {
                   color: #cda274;
                }
+            }
+         }
+         img {
+            @include mobile {
+               margin-top: 32px;
+               width: 100%;
             }
          }
       }
@@ -173,24 +223,35 @@
          margin: 0 auto;
          margin-top: 130px;
          margin-bottom: 350px;
+         @include mobile {
+            width: 100%;
+            margin-bottom: 64px;
+         }
          .heading {
             @include FontDMSerifTitle;
             font-size: 25px;
          }
-         .row {
+         .rowInpt {
             padding: 0;
             margin: 0;
             margin-top: 36px;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+
             input {
-               max-width: 430px;
+               // width: 100%;
+               width: 430px;
                border: none;
                outline: none;
                border-bottom: 1px solid #000;
                margin-top: 50px;
                padding-bottom: 15px;
                @include FontJostText;
+               @include mobile {
+                  width: 100%;
+                  margin-top: 32px !important;
+               }
             }
          }
          textarea.text-area {
@@ -204,6 +265,9 @@
             border-bottom: 1px solid #000;
             overflow: hidden;
             resize: none;
+            @include mobile {
+               padding-bottom: 70px;
+            }
          }
          .check {
             margin-top: 36px;
@@ -229,6 +293,12 @@
                color: #cda274;
                font-weight: bolder;
                font-size: 19px;
+            }
+            @include mobile {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 50px;
             }
          }
       }

@@ -14,8 +14,8 @@
   <!-- bootstrap css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- ===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <!-- ===== Boxicons CSS ===== -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- bootstrap icon cdn -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -32,10 +32,10 @@
     <header class="header">
       <nav>
         <div class="nav-bar container">
-          <i class='bx bx-menu sidebarOpen'></i>
-          <div class="logo navLogo">
+          <i class='bx bx-menu sidebarOpen' id="menuToggle"></i>
+          <div class="logo navLogo navLogo-sm">
             <img src="img/SELHONO_LOGO.png" alt="">
-            <a href="#">SELHONO</a>
+            <a href="index.html">SELHONO</a>
           </div>
 
           <div class="wrapper-nav">
@@ -43,9 +43,17 @@
               <div class="logo-toggle">
                 <div class="logo navLogo">
                   <img src="img/SELHONO_LOGO.png" alt="">
-                  <a href="#">SELHONO</a>
+                  <!-- <a href="index.html">SELHONO</a> -->
+                  <a href="index.html">SELHONO</a>
                 </div>
                 <i class='bx bx-x siderbarClose'></i>
+              </div>
+
+              <div class="search-sm">
+                <form action="" class="form-search-sm">
+                  <input type="text" placeholder="Search...">
+                  <i class='bx bx-search'></i>
+                </form>
               </div>
 
               <ul class="nav-links">
@@ -72,18 +80,21 @@
               </div>
             </div>
           </div>
-
-
         </div>
       </nav>
     </header>
     <!-- HEADER: END -->
+
+    <a href="#" class="scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
     <div class="team-banner" style="margin-top: 66px;">
       <p>Team</p>
     </div>
     <main class="main container">
       <div class="team-wrapper">
-        <a href="teamSingle.html"  class="team-wrapper-link">
+        <a href="teamSingle.html" class="team-wrapper-link">
           <div class="team-wrapper-item">
             <img src="img/Team/Person1.jpg" alt="">
             <div class="team-wrapper-item__inner">

@@ -32,10 +32,10 @@
     <header class="header">
       <nav>
         <div class="nav-bar container">
-          <i class='bx bx-menu sidebarOpen'></i>
-          <div class="logo navLogo">
+          <i class='bx bx-menu sidebarOpen' id="menuToggle"></i>
+          <div class="logo navLogo navLogo-sm">
             <img src="img/SELHONO_LOGO.png" alt="">
-            <a href="#">SELHONO</a>
+            <a href="index.html">SELHONO</a>
           </div>
 
           <div class="wrapper-nav">
@@ -43,9 +43,17 @@
               <div class="logo-toggle">
                 <div class="logo navLogo">
                   <img src="img/SELHONO_LOGO.png" alt="">
-                  <a href="#">SELHONO</a>
+                  <!-- <a href="index.html">SELHONO</a> -->
+                  <a href="index.html">SELHONO</a>
                 </div>
                 <i class='bx bx-x siderbarClose'></i>
+              </div>
+
+              <div class="search-sm">
+                <form action="" class="form-search-sm">
+                  <input type="text" placeholder="Search...">
+                  <i class='bx bx-search'></i>
+                </form>
               </div>
 
               <ul class="nav-links">
@@ -53,7 +61,7 @@
                 <li><a href="#">Pages</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="project.html">Project</a></li>
-                <li class="active"><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contactUs.html">Contact</a></li>
               </ul>
             </div>
@@ -72,12 +80,15 @@
               </div>
             </div>
           </div>
-
-
         </div>
       </nav>
     </header>
     <!-- HEADER: END -->
+
+    <a href="#" class="scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
     <div class="FAQ-banner" style="margin-top: 66px;">
       <p>FAQ’s</p>
     </div>
@@ -149,7 +160,7 @@
           </div>
           <!-- https://www.youtube.com/watch?v=4qnWreynXLU -->
         </div>
-        <div class="FAQ-wrapper-item" style="margin-top: 125px;">
+        <div class="FAQ-wrapper-item">
           <div class="heading">
             Project related questions
           </div>

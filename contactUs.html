@@ -28,62 +28,76 @@
   <div class="modal"></div>
   <div class="loading"></div>
   <div class="wrapper">
-    <!-- HEADER: START -->
-    <header class="header">
-      <nav>
-        <div class="nav-bar container">
-          <i class='bx bx-menu sidebarOpen'></i>
-          <div class="logo navLogo">
-            <img src="img/SELHONO_LOGO.png" alt="">
-            <a href="#">SELHONO</a>
-          </div>
-
-          <div class="wrapper-nav">
-            <div class="menu">
-              <div class="logo-toggle">
-                <div class="logo navLogo">
-                  <img src="img/SELHONO_LOGO.png" alt="">
-                  <a href="#">SELHONO</a>
-                </div>
-                <i class='bx bx-x siderbarClose'></i>
-              </div>
-
-              <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="active"><a href="contactUs.html">Contact</a></li>
-              </ul>
-            </div>
-
-            <div class="darkLight-searchBox">
-              <div class="searchBox">
-                <div class="searchToggle">
-                  <i class='bx bx-x cancel'></i>
-                  <i class='bx bx-search search'></i>
-                </div>
-
-                <div class="search-field">
-                  <input type="text" placeholder="Search...">
-                  <i class='bx bx-search'></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
+  <!-- HEADER: START -->
+  <header class="header">
+    <nav>
+      <div class="nav-bar container">
+        <i class='bx bx-menu sidebarOpen' id="menuToggle"></i>
+        <div class="logo navLogo navLogo-sm">
+          <img src="img/SELHONO_LOGO.png" alt="">
+          <a href="index.html">SELHONO</a>
         </div>
-      </nav>
-    </header>
-    <!-- HEADER: END -->
+
+        <div class="wrapper-nav">
+          <div class="menu">
+            <div class="logo-toggle">
+              <div class="logo navLogo">
+                <img src="img/SELHONO_LOGO.png" alt="">
+                <!-- <a href="index.html">SELHONO</a> -->
+                <a href="index.html">SELHONO</a>
+              </div>
+              <i class='bx bx-x siderbarClose'></i>
+            </div>
+
+            <div class="search-sm">
+              <form action="" class="form-search-sm">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+              </form>
+            </div>
+
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="project.html">Project</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li class="active"><a href="contactUs.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="darkLight-searchBox">
+            <div class="searchBox">
+              <div class="searchToggle">
+                <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i>
+              </div>
+
+              <div class="search-field">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- HEADER: END -->
+
+  <a href="#" class="scroll-top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
     <div class="contactUs-banner" style="margin-top: 66px;">
     </div>
     <main class="main container">
       <div class="contactUs-wrapper">
-        <p class="heading">
+        <p class="heading sm-Dis-none">
           We love meeting new people and <br> helping them.
+        </p>
+        <p class="heading heading-sm">
+          We love meeting new people and helping them.
         </p>
         <div class="contactUs-wrapper-via">
           <div class="contactUs-wrapper-via__socail">
@@ -121,8 +135,7 @@
           </div>
         </div>
         <div class="gg-map">
-          <img src="img/ContactUs/map.png" alt="" class="local-map">
-          <i class="bi bi-geo-alt-fill"></i>
+          <img src="img/ContactUs/map.svg" alt="" class="local-map">
         </div>
       </div>
 

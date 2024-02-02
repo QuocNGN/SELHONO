@@ -5,6 +5,7 @@
 .contactUs-banner {
    @include commonBannerStyles;
    background-image: url("/img/ContactUs/Banner.png");
+   background-position: top;
 }
 .main {
    .contactUs-wrapper {
@@ -12,12 +13,28 @@
       .heading {
          margin-top: 76px;
          @include FontDMSerifTitle;
+         @include mobile {
+            margin-top: 134px;
+            font-size: 32px;
+         }
+      }
+      .heading-sm {
+         display: none;
+      }
+      @include mobile {
+         .heading-sm {
+            display: block;
+         }
       }
       &-via {
          margin-top: 96px;
          display: flex;
          justify-content: space-between;
          column-gap: 155px;
+         @include mobile {
+            flex-wrap: wrap;
+            margin-top: 64px !important;
+         }
          &__socail {
             min-width: 260px;
             .contact {
@@ -57,22 +74,16 @@
             }
          }
          &__form {
+            @include mobile {
+               margin-top: 64px;
+            }
             form {
                max-width: 900px;
                .input-wrapper {
                   display: flex;
                   flex-wrap: wrap;
                   justify-content: space-between;
-                  // input {
-                  //    border: none;
-                  //    outline: none;
-                  //    border-bottom: 1px solid #000;
-                  //    width: 378px;
-                  //    padding: 0;
-                  //    margin: 0;
-                  //    margin-bottom: 50px;
-                  //    @include FontJostText;
-                  //    padding-bottom: 5px;
+                  padding-bottom: 5px;
                }
             }
             input,
@@ -86,6 +97,9 @@
                margin-bottom: 50px;
                @include FontJostText;
                padding-bottom: 5px;
+               @include mobile {
+                  width: 100%;
+               }
             }
             .text-area {
                margin: 0;
@@ -95,30 +109,28 @@
                overflow: hidden;
                resize: none;
                margin-bottom: 58px;
+               @include mobile {
+                  padding-bottom: 80px;
+               }
             }
             button {
                @include BtnBlack;
                float: right;
+               @include mobile {
+                  margin: 0;
+               }
             }
          }
       }
    }
    .gg-map {
       margin-top: 120px;
-      border-radius: 100px;
-      overflow: hidden;
-      min-height: 540px;
-      position: relative;
+      @include mobile {
+         margin-top: 64px;
+      }
       img {
          width: 100%;
          height: 100%;
-      }
-      i.bi-geo-alt-fill {
-         position: absolute;
-         top: 47%;
-         left: 26%;
-         color:  #CDA274;
-         font-size: 32px;
       }
    }
 }

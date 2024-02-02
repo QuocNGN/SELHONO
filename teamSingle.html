@@ -32,10 +32,10 @@
     <header class="header">
       <nav>
         <div class="nav-bar container">
-          <i class='bx bx-menu sidebarOpen'></i>
-          <div class="logo navLogo">
+          <i class='bx bx-menu sidebarOpen' id="menuToggle"></i>
+          <div class="logo navLogo navLogo-sm">
             <img src="img/SELHONO_LOGO.png" alt="">
-            <a href="#">SELHONO</a>
+            <a href="index.html">SELHONO</a>
           </div>
 
           <div class="wrapper-nav">
@@ -43,9 +43,17 @@
               <div class="logo-toggle">
                 <div class="logo navLogo">
                   <img src="img/SELHONO_LOGO.png" alt="">
-                  <a href="#">SELHONO</a>
+                  <!-- <a href="index.html">SELHONO</a> -->
+                  <a href="index.html">SELHONO</a>
                 </div>
                 <i class='bx bx-x siderbarClose'></i>
+              </div>
+
+              <div class="search-sm">
+                <form action="" class="form-search-sm">
+                  <input type="text" placeholder="Search...">
+                  <i class='bx bx-search'></i>
+                </form>
               </div>
 
               <ul class="nav-links">
@@ -72,12 +80,15 @@
               </div>
             </div>
           </div>
-
-
         </div>
       </nav>
     </header>
     <!-- HEADER: END -->
+
+    <a href="#" class="scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
     <div class="team-banner" style="margin-top: 66px;">
       <p>Team Single</p>
     </div>
@@ -205,7 +216,7 @@
             </div>
           </div>
         </div>
-        <div class="team-wrapper" style="margin-bottom: 208px;margin-top: 105px;">
+        <div class="team-wrapper">
           <a href="teamSingle.html" class="team-wrapper-link">
             <div class="team-wrapper-item">
               <img src="img/Team/Person8.jpg" alt="">

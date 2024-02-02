@@ -97,10 +97,12 @@
     &.sticky {
       padding: 20px !important;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      
+
       @include mobile {
         padding: 10px !important;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        box-shadow:
+          rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       }
     }
 
@@ -147,12 +149,12 @@
 
         @include mobile {
           a {
-            filter: drop-shadow(7px 2px 3px rgba(0, 0, 0, .25))
+            filter: drop-shadow(7px 2px 3px rgba(0, 0, 0, 0.25));
           }
 
           img {
             width: 35px;
-            filter: drop-shadow(5px 2px 3px rgba(0, 0, 0, .25))
+            filter: drop-shadow(5px 2px 3px rgba(0, 0, 0, 0.25));
           }
         }
 
@@ -183,7 +185,7 @@
             background-color: #d2b48c;
             width: 100%;
             height: 100%;
-            animation: slideIn .35s ease-in;
+            animation: slideIn 0.35s ease-in;
 
             .menu {
               z-index: 99;
@@ -198,7 +200,7 @@
               .nav-links {
                 margin: 0 !important;
                 padding: 0;
-
+      
                 li a {
                   color: #fff;
                   font-size: 25px;
@@ -261,7 +263,6 @@
             display: flex;
             align-items: center;
             column-gap: 60px;
-            
 
             @include mobile {
               flex-direction: column;
@@ -383,7 +384,7 @@
                   pointer-events: none;
                 }
 
-                ~.search-field {
+                ~ .search-field {
                   bottom: -74px;
                   opacity: 1;
                   pointer-events: auto;

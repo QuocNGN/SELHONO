@@ -184,9 +184,6 @@ swiper-container {
 
 .main {
    .aboutUs-wrapper {
-      @include mobile {
-         margin: 0 16px !important;
-      }
       .think-feel {
          margin-top: 133px;
          text-align: center;

@@ -59,17 +59,17 @@
 @mixin absoluteDirection($direction) {
 	position: absolute;
 
-	@if $direction =="left" {
+	@if $direction == "left" {
 		left: 0;
 		top: 0;
 	}
 
-	@if $direction =="right" {
+	@if $direction == "right" {
 		right: 0;
 		top: 0;
 	}
 
-	@if $direction =="center" {
+	@if $direction == "center" {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -112,15 +112,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	background-position: center;
+	background-size: auto 40%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	margin-top: -60px !important;
 
 	@include mobile {
 		height: 200px;
 		font-size: 55px;
 	}
-
 }
 
 @mixin footerDateBtn {
@@ -142,5 +142,21 @@
 		font-weight: bolder;
 		font-size: 20px;
 		background-color: #f4f0ec;
+	}
+}
+
+@mixin overscroll-behavior-x {
+	@media screen and (max-width: 739px) {
+		column-gap: 20px;
+		margin-top: 64px !important;
+		scroll-behavior: auto;
+		overflow-y: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 }

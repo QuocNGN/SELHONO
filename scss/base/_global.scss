@@ -75,9 +75,25 @@ body{
   .sm-Dis-none {
     display: none;
   }
-}
-@include mobile {
   .mt-sm {
     margin-top: 64px;
   }
+
+  // Config Padding Mobile
+  .aboutUs-wrapper,
+  .services-wrapper,
+  .servicesSingle-wrapper,
+  .pricing-wrapper,
+  .blog-wrapper ,
+  .blog-details-wrapper,
+  .project-wrapper,
+  .projectDetails-wrapper,
+  .team-wrapper,
+  .teamSingle-wrapper,
+  .FAQ-wrapper,
+  .contactUs-wrapper  {
+    padding: 0 16px !important;
+  }
 }
+
+

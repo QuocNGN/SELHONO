@@ -8,9 +8,6 @@
 }
 .main {
    .project-wrapper {
-      @include mobile {
-         padding: 0 16px !important;
-      }
       display: flex;
       justify-content: center;
       #filter {
@@ -66,7 +63,8 @@
                @include mobile {
                   margin-top: 64px !important;
                   max-width: 100% !important;
-                  margin: auto;
+                  // margin: auto;
+                  width: 100%;
                }
                a {
                   .img-room-zoom {
@@ -76,7 +74,8 @@
                      overflow: hidden;
                      border-radius: 10px 10px 0 0;
                      @include mobile {
-                        height: 550px !important;
+                        height: auto !important;
+                        max-width: 100%;
                      }
 
                      .img-room {
@@ -110,6 +109,9 @@
                width: 100%;
                margin-top: 112px;
                margin-bottom: 235px;
+               @include mobile {
+                  margin-bottom: 64px;
+               }
                display: flex;
                justify-content: center;
                column-gap: 20px;

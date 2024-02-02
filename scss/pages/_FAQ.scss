@@ -10,16 +10,30 @@
    .FAQ-wrapper {
       text-align: center;
       margin-top: 136px;
-      height: 1975px;
+      height: fit-content;
+      padding-bottom: 217px;
+      @include mobile {
+         padding-bottom: 64px;
+      }
+
       &-item {
          .heading {
             @include FontDMSerifTitle;
+            @include mobile {
+               font-size: 32px;
+               padding-top: 64px !important;
+            }
          }
          &-content {
             margin-top: 50px;
             display: flex;
             justify-content: space-between;
             column-gap: 60px;
+            @include mobile {
+               width: 100%;
+               justify-content: center;
+               flex-wrap: wrap;
+            }
             section {
                .faq {
                   text-align: start;
@@ -29,6 +43,9 @@
                   margin-top: 20px;
                   cursor: pointer;
                   overflow: hidden;
+                  @include mobile {
+                     max-width: 100%;
+                  }
                   .question {
                      display: flex;
                      justify-content: space-between;
@@ -40,7 +57,7 @@
                         margin: 0;
                      }
                      i {
-                        transition: transform .65s ease;
+                        transition: transform 0.65s ease;
                      }
                   }
                   .awnser {
@@ -48,12 +65,15 @@
                      @include FontJostText;
                      max-height: 0;
                      overflow: hidden;
-                     transition: max-height .75s ease;
+                     transition: max-height 0.75s ease;
+                     @include mobile {
+                        font-size: 14px;
+                     }
                   }
                   &.active {
                      .awnser {
                         max-height: 100vh;
-                        animation: fade .75s ease-in-out;
+                        animation: fade 0.75s ease-in-out;
                      }
                      i.bi-chevron-down {
                         transform: rotate(180deg);
@@ -64,6 +84,20 @@
             img {
                border-radius: 30px;
                height: 720px;
+               @include mobile {
+                  margin-top: 64px !important;
+                  width: 100%;
+                  height: auto;
+               }
+            }
+         }
+         &:nth-child(2) {
+            margin-top: 125px;
+            @include mobile {
+               margin: 0 !important;
+               img {
+                  margin: 0 !important ;
+               }
             }
          }
       }
