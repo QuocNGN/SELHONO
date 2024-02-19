@@ -73,7 +73,7 @@ body{
 
 @include mobile {
   .sm-Dis-none {
-    display: none;
+    display: none !important;
   }
   .mt-sm {
     margin-top: 64px;
@@ -95,5 +95,3 @@ body{
     padding: 0 16px !important;
   }
 }
-
-

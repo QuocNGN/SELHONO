@@ -223,6 +223,7 @@
             &__inner {
                width: 520px;
                text-align: start;
+               padding-top: 0;
                @include mobile {
                   margin-top: 100px;
                }

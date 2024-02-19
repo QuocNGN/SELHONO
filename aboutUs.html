@@ -23,6 +23,8 @@
   <!-- bootstrap icon cdn -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
   <script src="js/jquery.zaccordion.js"></script>
 </head>
@@ -154,7 +156,7 @@
       </ul>
     </div>
 
-    <div class="container-fuild swiper-slide-wrapper">
+    <div class="container-fuild swiper-slide-wrapper show-in-sm">
       <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
         space-between="30" loop="true">
         <swiper-slide>
@@ -187,7 +189,7 @@
     <main class="main container">
       <div class="aboutUs-wrapper">
 
-        <div class="think-feel">
+        <div class="think-feel" >
           <div class="think-feel-wrap">
             <p class="comment">I like an interior that defies labeling. I don't <br> really want someone to walk into a
               room and <br> know that I did it</p>
@@ -196,7 +198,7 @@
         </div>
 
         <div class="section-content">
-          <div class="section-content-item">
+          <div class="section-content-item" data-aos="fade-right" data-aos-duration="800">
             <div class="section-content-item__text">
               <div class="title">
                 What We Do
@@ -210,7 +212,7 @@
             </div>
             <img src="img/ABOUT_US/ItemR.png" alt="">
           </div>
-          <div class="section-content-item">
+          <div class="section-content-item" data-aos="fade-left" data-aos-duration="800">
             <img src="img/ABOUT_US/ItemL.png" alt="">
             <div class="section-content-item__text">
               <div class="title">
@@ -227,7 +229,7 @@
           </div>
         </div>
 
-        <div class="people-thoughts-block" style="margin-top: 206px;">
+        <div class="people-thoughts-block" style="margin-top: 206px;" data-aos="slide-up" data-aos-duration="800">
           <div class="row people-thoughts-block-wrap">
             <p class="text-center title">What the People Thinks <br> About Us</p>
             <div class="col-4 people-thoughts-block__item">
@@ -265,7 +267,7 @@
           </div>
         </div>
 
-        <div class="form-contact">
+        <div class="form-contact" data-aos="slide-up" data-aos-duration="800">
           <p class="title">Creative project? Let's have <br>
             a productive talk.</p>
           <div class="form-contact-top">
@@ -379,6 +381,12 @@
   <script src="js/anime.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- scroll animate libra js -->
+    <!-- https://github.com/michalsnik/aos.git -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
   <script src="js/main.js"></script>
 </body>
 

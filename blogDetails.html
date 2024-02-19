@@ -20,6 +20,8 @@
   <!-- bootstrap icon cdn -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
   <script src="js/jquery.zaccordion.js"></script>
 </head>
@@ -94,14 +96,14 @@
     </div>
     <main class="main container" style="margin-top: 37px;">
       <div class="blog-details-wrapper">
-        <div class="blog-details-area">
+        <div class="blog-details-area" data-aos="slide-up" data-aos-duration="800">
           <div class="blog-details-area__sidebar">
-            <div class="blog-details-search">
+            <div class="blog-details-search" data-aos="slide-up" data-aos-duration="800">
               <input type="text" placeholder="Search">
               <i class="bi bi-search"></i>
             </div>
 
-            <div class="blog-details-area__sidebar-lastNews">
+            <div class="blog-details-area__sidebar-lastNews" data-aos="slide-up" data-aos-duration="800">
               <p class="heading">Latest News</p>
               <a href="#" style="text-decoration: none; color: #000;">
                 <div class="sidebar-lastNews-item">
@@ -126,7 +128,7 @@
               </a>
             </div>
 
-            <div class="blog-details-area__sidebar-categories">
+            <div class="blog-details-area__sidebar-categories" data-aos="slide-up" data-aos-duration="800">
               <span>Categories</span>
               <ul>
                 <li><a href="#"></a>Decoration</li>
@@ -136,7 +138,7 @@
               </ul>
             </div>
 
-            <div class="blog-details-area__sidebar-tags">
+            <div class="blog-details-area__sidebar-tags" data-aos="slide-up" data-aos-duration="800">
               <span>Tags</span>
               <ul class="tags-list">
                 <li class="tags-item active"><a href="#"></a>Kitchen</li>
@@ -149,11 +151,11 @@
             </div>
 
           </div>
-          <div class="blog-details-area__right-info">
+          <div class="blog-details-area__right-info" data-aos="slide-up" data-aos-duration="800">
             <p class="heading">Let’s Get Solution for Building
               Construction Work</p>
-            <img src="img/BlogDetails/Kitchen.jpg" alt="">
-            <p class="desc">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
+            <img src="img/BlogDetails/Kitchen.jpg" alt="" data-aos="slide-up" data-aos-duration="800">
+            <p class="desc" data-aos="slide-up" data-aos-duration="800">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
               to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have
               suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly
               believable. <br> <br>
@@ -163,7 +165,7 @@
           </div>
         </div>
 
-        <div class="blog-details-benefit">
+        <div class="blog-details-benefit" data-aos="slide-up" data-aos-duration="800">
           <div class="blog-details-benefit-content">
             <p class="heading">Design sprints are great</p>
             <p class="desc">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
@@ -178,10 +180,10 @@
                 majority have suffered.</li>
             </ol>
           </div>
-          <img src="img/BlogDetails/kitchen1.png" alt="">
+          <img src="img/BlogDetails/kitchen1.png" alt="" data-aos="slide-up" data-aos-duration="800">
         </div>
 
-        <div class="blog-details-reply">
+        <div class="blog-details-reply" data-aos="slide-up" data-aos-duration="800">
           <p class="heading">Leave a Reply</p>
           <form action="#" class="form-reply">
             <div class="rowInpt">
@@ -299,6 +301,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
   <script src="js/anime.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- scroll animate libra js -->
+    <!-- https://github.com/michalsnik/aos.git -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
   <script src="js/main.js"></script>
 </body>
 

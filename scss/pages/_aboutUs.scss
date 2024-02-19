@@ -145,6 +145,10 @@
 }
 .swiper-slide-wrapper {
    margin-top: -50px;
+   display: none;
+   @include mobile {
+      display: block;
+   }
 }
 swiper-container {
    width: 100%;
@@ -294,6 +298,12 @@ swiper-container {
                   margin-top: 32px;
                   width: 100%;
                   height: 300px;
+               }
+            }
+            img.sm-Dis-none {
+               display: none;
+               @include mobile {
+                  display: block;
                }
             }
          }
