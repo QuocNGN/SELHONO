@@ -23,7 +23,7 @@
                row-gap: 42px;
             }
             .info-block__item {
-               width: 33.333334%;
+               width: 32.6%;
                display: flex;
                flex-direction: column;
                text-align: center;
@@ -88,6 +88,8 @@
    }
 
    .section-content {
+      // display: none;
+      overflow: hidden;
       margin-top: 156px;
       &-item {
          position: relative;
@@ -164,7 +166,6 @@
    }
 }
 
-.bann
 .main .section-content-item__inner {
    transform: translateY(0);
 }

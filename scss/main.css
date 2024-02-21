@@ -180,6 +180,12 @@ body {
     padding: 0 16px !important;
   }
 }
+@media (max-width: 739px) {
+  .main {
+    overflow: hidden !important;
+  }
+}
+
 @keyframes fillBars {
   from {
     width: 0;
@@ -1372,7 +1378,6 @@ body {
   background-image: url("/img/HOME/bannerHalfL.png"), url("/img/HOME/bannerHalfR.png");
   background-repeat: no-repeat, no-repeat;
   background-position: left center, right center;
-  background-attachment: fixed;
   background-size: auto 100%;
   height: 700px;
   margin-top: 154px;
@@ -1511,6 +1516,7 @@ body {
 @media screen and (max-width: 739px) {
   .people-thoughts-block .people-thoughts-block-wrap .people-thoughts-block__item {
     width: 100%;
+    height: auto !important;
   }
 }
 .people-thoughts-block .people-thoughts-block-wrap .people-thoughts-block__item .info .info-heading {
@@ -2662,7 +2668,7 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
@@ -2671,6 +2677,7 @@ swiper-container {
   .services-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -2694,7 +2701,7 @@ swiper-container {
   }
 }
 .main .services-wrapper .info-blocks-wrap .info-block__item {
-  width: 33.333334%;
+  width: 32.6%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -2788,6 +2795,7 @@ swiper-container {
   letter-spacing: 0.22px;
 }
 .main .section-content {
+  overflow: hidden;
   margin-top: 156px;
 }
 .main .section-content-item {
@@ -2883,7 +2891,7 @@ swiper-container {
   letter-spacing: 0.9px;
 }
 
-.bann .main .section-content-item__inner {
+.main .section-content-item__inner {
   transform: translateY(0);
 }
 
@@ -2990,7 +2998,7 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
@@ -2999,6 +3007,7 @@ swiper-container {
   .serviceSingle-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -3445,7 +3454,7 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
@@ -3454,6 +3463,7 @@ swiper-container {
   .pricing-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -3683,7 +3693,7 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
@@ -3693,6 +3703,7 @@ swiper-container {
   .project-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -3711,7 +3722,7 @@ swiper-container {
 }
 @media (max-width: 739px) {
   .main .project-wrapper #filter .filter_button {
-    width: 100%;
+    width: calc(100vw - 16px);
   }
 }
 .main .project-wrapper #filter .filter_button > a.btn-filter-tab {
@@ -3956,16 +3967,17 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
-  background-image: url("/img/ProjectDetails/Banner.svg");
+  background-image: url("/img/ProjectDetails/Banner.png");
 }
 @media (max-width: 739px) {
   .projectDetails-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -4305,16 +4317,17 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
-  background-image: url("/img/Blog/Banner.svg");
+  background-image: url("/img/Blog/Banner.png");
 }
 @media (max-width: 739px) {
   .blog-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -4668,16 +4681,17 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
-  background-image: url("/img/BlogDetails/Banner.svg");
+  background-image: url("/img/BlogDetails/Banner.png");
 }
 @media (max-width: 739px) {
   .blog-details-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -5230,16 +5244,17 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
-  background-image: url("/img/Team/Banner.svg");
+  background-image: url("/img/Team/Banner.png");
 }
 @media (max-width: 739px) {
   .team-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -5441,16 +5456,17 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
-  background-image: url("/img/Team/Banner.svg");
+  background-image: url("/img/Team/Banner.png");
 }
 @media (max-width: 739px) {
   .team-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -5951,16 +5967,17 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
-  background-image: url("/img/Team/Banner.svg");
+  background-image: url("/img/Team/Banner.png");
 }
 @media (max-width: 739px) {
   .team-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -6167,7 +6184,7 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
@@ -6178,6 +6195,7 @@ swiper-container {
   .contactUs-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 
@@ -6471,7 +6489,7 @@ swiper-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: auto 40%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-top: -60px !important;
@@ -6481,6 +6499,7 @@ swiper-container {
   .FAQ-banner {
     height: 200px;
     font-size: 55px;
+    background-size: auto !important;
   }
 }
 

@@ -95,3 +95,8 @@ body{
     padding: 0 16px !important;
   }
 }
+.main {
+  @include mobile {
+    overflow: hidden !important;
+  }
+}

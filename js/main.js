@@ -25,29 +25,29 @@ $(document).ready(function () {
         }
     });
 
-/* -------------------------------------------------------------
-    ================ Home Index - Search Dropdown, Sidebar
------------------------------------------------------------------*/
-const nav = $('nav');
-const searchToggle = $('.searchToggle');
-const sidebarOpen = $('.sidebarOpen');
-const body = $('body');
+    /* -------------------------------------------------------------
+        ================ Home Index - Search Dropdown, Sidebar
+    -----------------------------------------------------------------*/
+    const nav = $('nav');
+    const searchToggle = $('.searchToggle');
+    const sidebarOpen = $('.sidebarOpen');
+    const body = $('body');
 
-searchToggle.on('click', function () {
-    searchToggle.toggleClass('active');
-});
+    searchToggle.on('click', function () {
+        searchToggle.toggleClass('active');
+    });
 
-sidebarOpen.on('click', function () {
-    nav.addClass('active');
-});
+    sidebarOpen.on('click', function () {
+        nav.addClass('active');
+    });
 
-body.on('click', function (e) {
-    let clickedElm = $(e.target);
+    body.on('click', function (e) {
+        let clickedElm = $(e.target);
 
-    if (!clickedElm.hasClass('sidebarOpen') && !clickedElm.hasClass('menu')) {
-        nav.removeClass('active');
-    }
-});
+        if (!clickedElm.hasClass('sidebarOpen') && !clickedElm.hasClass('menu')) {
+            nav.removeClass('active');
+        }
+    });
 
     /* -------------------------------------------------------------
         ================ FAQ - accordion Toggle 
@@ -205,15 +205,139 @@ body.on('click', function (e) {
 // });
 
 /* -------------------------------------------------------------
+    ================ Project Page - tab Filter
+-----------------------------------------------------------------*/
+const nameItem = $('name_item');
+const elementRoom = $('.element_room');
+const btnFilterTab = $('.filter_button .btn-filter-tab');
+
+btnFilterTab.on('click', function (event) {
+    // console.log(event.target);
+    btnFilterTab.removeClass('active');
+    $(this).addClass('active');
+
+    let nameFilter = $(this).data('filter');
+    elementRoom.each(function () {
+        if ($(this).data('item') === nameFilter || nameFilter === 'all') {
+            $(this).css('display', 'block');
+            // console.log($(this).data('item'));
+        } else {
+            $(this).css('display', 'none');
+        }
+    });
+});
+
+/* -------------------------------------------------------------
+    ================ ServicesSingle Page - auto Increase Number FUN-FACT
+-----------------------------------------------------------------*/
+// let counterNums = document.querySelectorAll(".fun-fact-item__inner p");
+// let sectionContainer = document.querySelector(".fun-fact");
+// //Variable that tracks if the counters have been activated
+// let actived = false; // Function Started ? No
+
+// // Add scroll event to the page
+// window.addEventListener("scroll", () => {
+//     /* If the page is scrolled to the containers
+//     element and the counters are not activated */
+//     if (pageYOffset > sectionContainer.offsetTop - sectionContainer.offsetHeight - 400 && actived === false) {
+//         // Select all counter
+//         counterNums.forEach(counterNum => {
+//             //Set counter values to zero
+//             counterNum.innerText = 0;
+//             /* Set count variable to track the count*/
+//             let count = 0;
+//             //Update count function
+//             function updateCount() {
+//                 //Get counter target number to count to
+//                 const target = parseInt(counterNum.dataset.count);
+//                 //As long as the count is below the target number
+//                 if (count < target) {
+//                     //Increase the count
+//                     count++;
+//                     counterNum.innerText = count;
+//                     //Repeat this every 10 milliseconds
+//                     setTimeout(updateCount, 1) /*Count speed */
+//                     //And when the target is reached
+//                 } else {
+//                     //Set the counter text to the target number
+//                     counterNum.innerText = target;
+//                 }
+//             }
+//             //Run the function initially
+//             updateCount();
+//             //Set activated to true
+//             activated = true;
+//         });
+//     } else if (pageYOffset < sectionContainer.offsetTop - sectionContainer.offsetHeight - 10 || pageYOffset === 0 && activated === true) {
+//         //Select all counter 
+//         counterNums.forEach(counterNum => {
+//             //Set counter text back to zero
+//             counterNum.innerText = 0;
+//         });
+//         //Set activated to false
+//         activated = false;
+//     }
+// });
+const itemsCounter = document.querySelectorAll('.numbCount');
+let isCounting = false;
+
+const updateCount = (el) => {
+    const value = parseInt(el.dataset.value);
+    const increment = Math.ceil(value / 1000);
+    let initialValue = 0;
+    const increaseCount = setInterval(() => {
+        initialValue += increment;
+        if (initialValue > value) {
+            el.innerText = `${value}`;
+            clearInterval(increaseCount);
+            return;
+        }
+        el.innerText = `${initialValue}`;
+    });
+};
+
+const startCounting = () => {
+    if (!isCounting) {
+        itemsCounter.forEach((item) => {
+            updateCount(item);
+        });
+        isCounting = true;
+    }
+};
+
+const isElementInViewport = (el) => {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+const handleScroll = () => {
+    const funFactContainer = document.querySelector('.fun-fact');
+    if (isElementInViewport(funFactContainer)) {
+        startCounting();
+        window.removeEventListener('scroll', handleScroll);
+    }
+};
+
+window.addEventListener('scroll', handleScroll);
+
+
+/* -------------------------------------------------------------
     ================ ServicesSingle Page - Model Video
 -----------------------------------------------------------------*/
 const btnPreview = document.querySelector('.play');
 const videoModal = document.querySelector('.clip');
 const btnCloseVideo = document.querySelector('.closeBtn');
 const videoOverlay = document.querySelector('.video-overlay');
+const videoElement = document.querySelector('.clip video');
 
 btnPreview.addEventListener('click', () => {
     videoModal.classList.add('show');
+    videoElement.play(); // Tự động chạy video khi modal hiển thị
     console.log('click me!!!');
 });
 
@@ -226,32 +350,14 @@ videoOverlay.addEventListener('click', () => {
 });
 
 function closeVideoModal() {
+    if (!videoElement.paused) {
+        videoElement.pause(); // Dừng video nếu đang chạy
+    }
     videoModal.classList.remove('show');
 }
 
 
 
-/* -------------------------------------------------------------
-    ================ Project Page - tab Filter
------------------------------------------------------------------*/
-const nameItem = $('name_item');
-const elementRoom = $('.element_room');
-const btnFilterTab = $('.filter_button .btn-filter-tab');
 
-btnFilterTab.on('click', function (event) {
-    console.log(event.target);
-    btnFilterTab.removeClass('active');
-    $(this).addClass('active');
-
-    let nameFilter = $(this).data('filter');
-    elementRoom.each(function () {
-        if ($(this).data('item') === nameFilter || nameFilter === 'all') {
-            $(this).css('display', 'block');
-            console.log($(this).data('item'));
-        } else {
-            $(this).css('display', 'none');
-        }
-    });
-});
 
 
