@@ -9,8 +9,9 @@
 .main {
    .services-wrapper {
       margin-top: 200px;
-      @include mobile {
+      @include tablet-mobile {
          margin-bottom: 64px;
+         margin-top: 50px;
       }
 
       .info-blocks {
@@ -19,7 +20,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             row-gap: 171px;
-            @include mobile {
+            @include tablet-mobile {
                row-gap: 42px;
             }
             .info-block__item {
@@ -28,8 +29,11 @@
                flex-direction: column;
                text-align: center;
                @include mobile {
-                  width: 100%;
+                  width: 100% !important;
                   padding: 0 30px;
+               }
+               @include tablet-mobile {
+                  width: 45%;
                }
                .title {
                   @include FontDMSerifTitle;
@@ -76,7 +80,7 @@
    .section-slogan {
       margin-top: 293px;
       text-align: center;
-      @include mobile {
+      @include tablet-mobile {
          margin-top: 64px;
       }
       .title {
@@ -91,6 +95,9 @@
       // display: none;
       overflow: hidden;
       margin-top: 156px;
+      @include tablet-mobile {
+         margin-top: 30px;
+      }
       &-item {
          position: relative;
          display: flex;
@@ -105,7 +112,8 @@
                left: 0;
             }
          }
-         @include mobile {
+
+         @include tablet-mobile {
             margin-top: 64px;
             img {
                width: 100%;
@@ -119,9 +127,12 @@
          }
          &__inner {
             padding-top: 150px;
-            @include mobile {
+            @include tablet-mobile {
                padding: 0;
                margin-top: 32px;
+               &:nth-child(even) {
+                  width: 100%;
+               }
             }
             .title {
                font-size: 35px;
@@ -131,7 +142,7 @@
             .content {
                @include FontJostText;
             }
-      
+
             .numTitle-sm {
                display: none;
                @include fontDMSerif400;
@@ -140,13 +151,13 @@
                font-style: normal;
                letter-spacing: 0.9px;
             }
-            @include mobile {
+            @include tablet-mobile {
                .numTitle-sm {
                   display: block;
                }
             }
          }
-         @include mobile {
+         @include tablet-mobile {
             .numTitle {
                display: none;
             }

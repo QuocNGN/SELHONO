@@ -9,13 +9,13 @@
 }
 
 @mixin tablet-mobile {
-	@media (max-width: 1023px) {
+	@media (max-width: 1024px) {
 		@content;
 	}
 }
 
 @mixin tablet {
-	@media (min-width: 740px) and (max-width: 1023px) {
+	@media (min-width: 740px) and (max-width: 1024px) {
 		@content;
 	}
 }
@@ -116,11 +116,15 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	margin-top: -60px !important;
-	
+
 	@include mobile {
 		height: 200px;
 		font-size: 55px;
 		background-size: auto !important;
+	}
+	@include tablet-mobile {
+		height: 356px;
+		background-size: 100% 50%;
 	}
 }
 

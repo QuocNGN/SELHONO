@@ -28,7 +28,7 @@
   right: 60px;
   bottom: 50px;
 
-  @media screen and (max-width: 739px) {
+  @media screen and (max-width: 1024px) {
     width: 50px !important;
     height: 50px !important;
     font-size: 22px !important;
@@ -63,7 +63,7 @@
     opacity: 0.85;
     right: 60px;
 
-    @media screen and (max-width: 739px) {
+    @media screen and (max-width: 1024px) {
       right: 30px !important;
     }
   }
@@ -139,6 +139,14 @@
           top: 50%;
           transform: translateY(-50%);
         }
+        @include tablet-mobile {
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #000;
+        }
       }
 
       // Responsive SideBar :end
@@ -175,7 +183,7 @@
         align-items: center;
         column-gap: 70px;
 
-        @include mobile {
+        @include tablet-mobile {
           display: none;
 
           &.active {
@@ -186,6 +194,8 @@
             width: 100%;
             height: 100%;
             animation: slideIn 0.35s ease-in;
+            left: 0;
+            top: 0;
 
             .menu {
               z-index: 99;
@@ -268,12 +278,16 @@
               flex-direction: column;
               row-gap: 15px;
             }
+            @include tablet-mobile {
+              flex-direction: column;
+              row-gap: 15px;
+            }
 
             li {
               list-style: none;
               transform: 0.3s ease;
 
-              @include mobile {
+              @include tablet-mobile {
                 width: 100%;
                 text-align: center;
                 box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
@@ -304,6 +318,9 @@
                   transition: 0.3s;
 
                   @include mobile {
+                    display: none;
+                  }
+                  @include tablet-mobile {
                     display: none;
                   }
                 }
@@ -453,7 +470,7 @@
 }
 
 // Mobile
-@media (max-width: 739px) {
+@media (max-width: 1024px) {
   .header {
     max-width: 100%;
   }

@@ -16,6 +16,9 @@
          @include mobile {
             margin-top: 180px !important;
          }
+         @include tablet-mobile {
+            margin-top: 30px !important;
+         }
          .title {
             @include FontDMSerifTitle;
             @include mobile {
@@ -68,6 +71,10 @@
             height: 260px;
             background-position: center;
             border-radius: 20px;
+         }
+         @include tablet-mobile {
+            margin-top: 30px !important;
+            background-size: 100% 100%;
          }
 
          .icon-play {
@@ -174,6 +181,9 @@
             row-gap: 32px;
             margin-top: 64px;
          }
+         @include tablet-mobile {
+            margin-top: 30px !important;
+         }
          span {
             width: 1px;
             height: 350px;
@@ -254,7 +264,7 @@
          .splash {
             height: 100px;
          }
-         @include mobile {
+         @include tablet-mobile {
             margin: 64px 0;
          }
       }

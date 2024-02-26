@@ -71,6 +71,11 @@ body{
   }
 }
 
+@include tablet-mobile {
+  .sm-Dis-none {
+    display: none !important;
+  }
+}
 @include mobile {
   .sm-Dis-none {
     display: none !important;
